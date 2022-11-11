@@ -1630,15 +1630,7 @@
             ],
             "adContent": [
                 {
-                    "value": "</a></span>",
-                    "direction": 2
-                },
-                {
-                    "value": "</div>\n</div>\n\n<div class=\"pt-left\">",
-                    "direction": 1
-                },
-                {
-                    "value":  "</span>",
+                    "value": "rectangle_PC']\");\n  });\n</script>",
                     "direction": 2
                 }
             ]
