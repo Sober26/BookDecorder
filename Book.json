@@ -1496,6 +1496,7 @@
     
     
     "content": {
+        "replaceText": ["article", "/article", "id=\"nr\""],
         "route1": {
             "prev": "//*[@id=\"prev\"]",
             "next": "//*[@id=\"next\"]",
@@ -1724,7 +1725,7 @@
         }
     },
     "version": "1",
-    "watchCount": 20,
+    "watchCount": 17,
     "route1": "https://tw.uukanshu.com",
     "route2": "https://www.69shu.com",
     "route3": "https://uukanshu.cc",
@@ -2881,7 +2882,7 @@
             ]
         }
     },
-    "redeemCodes": ["MDIYUNE"],
+    "redeemCodes": [],
     "linovelCodes": ["LODENBW"],
     "excludeBooks": []
 }
