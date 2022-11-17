@@ -2882,7 +2882,7 @@
             ]
         }
     },
-    "redeemCodes": [],
+    "redeemCodes": ["WAGETAH"],
     "linovelCodes": ["LODENBW"],
     "excludeBooks": []
 }
