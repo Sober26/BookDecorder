@@ -1,6 +1,8 @@
 {
     "home": {
         "route1": {
+            "title1": "熱門小說推薦",
+            "title2": "最近更新",
             "latest": {
                 "contains": ["a href="],
                 "content": [
@@ -241,6 +243,8 @@
         },
         
         "route2": {
+            "title1": "熱門小說推薦",
+            "title2": "最近更新",
             "latest": {
                 "count": 19,
                 "xpath": "/html/body/div[3]/ul/li[1]/div[2]/div/ul/li",
@@ -438,6 +442,8 @@
         },
         
         "route3": {
+            "title1": "熱門小說推薦",
+            "title2": "最近更新",
             "latest": {
                 "xpath": "//*[@id=\"gengxin\"]/ul",
                 "contains": ["/book/"],
@@ -618,6 +624,8 @@
         },
         
         "route4": {
+            "title1": "熱門小說推薦",
+            "title2": "最近更新",
             "latest": {
                 "prefixs": ["/piaotian"],
                 "suffixs": ["html"],
@@ -794,6 +802,8 @@
         },
         
         "route5": {
+            "title1": "熱門小說推薦",
+            "title2": "最近更新",
             "latest": {
                 "xpath": "/html/body/div[4]/div[4]/div[1]/ul",
                 "suffixs": ["html"],
@@ -960,6 +970,7 @@
         },
         
         "route101": {
+            "title1": "推薦小說",
             "category": {
                 "api": "https://tw.linovelib.com/sort/",
                 "suffixs": [".html"],
@@ -2720,10 +2731,15 @@
             "apiSuffix": "&searchtype=all",
             "condition": "<ol class=\"book-ol book-ol-normal\">",
             "contains": ["/novel/"],
+            "replaceText": ["<span class=\"hot\">"],
             "categoryItems": [
                 [
                     {
                         "value": "<em class=\"tag-small red\">",
+                        "direction": 2
+                    },
+                    {
+                        "value": "<em class=\"tag-small yellow\">",
                         "direction": 2
                     },
                     {
@@ -2770,15 +2786,11 @@
             ],
             "nameContent": [
                 {
-                    "value": "class=\"book-title\">",
+                    "value": "class=\"book-cover\" alt=\"",
                     "direction": 2
                 },
                 {
-                    "value": "</h4>",
-                    "direction": 1
-                },
-                {
-                    "value": "<span",
+                    "value": "\"",
                     "direction": 1
                 }
             ],
