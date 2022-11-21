@@ -1584,8 +1584,12 @@
             "rawContentReplaceText": ["<p class=\"readcotent bbb font-normal\">", "bbb", "<p class", "readcotent", "font-normal"],
             "content": [
                 {
-                    "value": "",
+                    "value": "readcotent bbb font-normal\">",
                     "direction": 2
+                },
+                {
+                    "value": "<div style=\"text-align:center;\">",
+                    "direction": 1
                 }
             ]
         },
