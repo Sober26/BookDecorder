@@ -1654,6 +1654,7 @@
         "route101": {
             "imageKey": "ΩΩΩΩ",
             "imageHTML": "<div class=\"divimage\">",
+            "imageHTML2": "<img src=\"",
             "imageCount": 3,
             "needPutImageKey": "|Ω≈Ω|",
             "urlContains": ["/novel/"],
