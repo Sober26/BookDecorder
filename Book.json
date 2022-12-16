@@ -1702,6 +1702,16 @@
                         "value": "\"",
                         "direction": 1
                     }
+                ],
+                "introductionContent": [
+                    {
+                        "value": "class=\"acontent\">",
+                        "direction": 2
+                    },
+                    {
+                        "value": "<img src=",
+                        "direction": 1
+                    }
                 ]
             },
             "text": {
