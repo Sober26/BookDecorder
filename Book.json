@@ -860,7 +860,7 @@
             },
             
             "category": {
-                "api": "https://www.twfanti.com/category.html",
+                "api": "https://www.ftxiaoshuo.com/category.html",
                 "from": 1,
                 "count": 14,
                 "xpath": "/html/body/div[4]/div[1]/div[1]/div",
@@ -1757,7 +1757,7 @@
     "route3": "https://uukanshu.cc",
     "route3_1": "https://www.uukanshu.com",
     "route4": "https://www.twpiaotians.com",
-    "route5": "https://www.twfanti.com",
+    "route5": "https://www.ftxiaoshuo.com",
     "route101": "https://tw.linovelib.com",
     "route3_1Domain": "www.uukanshu.com",
     
@@ -2655,7 +2655,7 @@
             ]
         },
         "route5": {
-            "api": "https://www.twfanti.com/search/result.html?searchkey=",
+            "api": "https://www.ftxiaoshuo.com/search/result.html?searchkey=",
             "xpath": "/html/body/div[4]/div[1]/span",
             "contains": ["/book/"],
             "content": [
