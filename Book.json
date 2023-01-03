@@ -1750,8 +1750,9 @@
             }
         }
     },
-    "version": "1",
-    "watchCount": 2000,
+    "version": "406",
+    "watchCount": 250,
+    "hasRestricted": true,
     "route1": "https://tw.uukanshu.com",
     "route2": "https://www.69shu.com",
     "route3": "https://uukanshu.cc",
