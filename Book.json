@@ -2032,6 +2032,8 @@
             "urlContains": ["/n/"],
             "prev": "#sticky-parent > div.chapter-detail.style-left > ul > li:nth-child(1) > a",
             "next": "#sticky-parent > div.chapter-detail.style-left > ul > li:nth-child(2) > a",
+            "next2": "#sticky-parent > div.chapter-detail.style-left > ul > li > a",
+            
             "rawContent": "/html/body/div[5]/div[2]/div[2]/div[4]",
             "chapterName":"/html/body/div[5]/div[2]/div[2]/div[3]",
             "chapterNameContent":[
@@ -2051,6 +2053,7 @@
             ]
         }
     },
+    
     "version": "406",
     "watchCount": 250,
     "hasRestricted": true,
@@ -2074,6 +2077,7 @@
     
     
     "route1001Prefix": "https:",
+    "route1001ChapterKey": "chapterNumber=",
     "validChapterURL": ["/n/"],
     
  
