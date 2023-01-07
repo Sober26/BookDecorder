@@ -2069,14 +2069,14 @@
     "route1001": "https://czbooks.net",
     "route3_1Domain": "www.uukanshu.com",
     
-    "route_key1": "1|∆∆∆|",
-    "route_key2": "2|∆∆∆|",
-    "route_key3": "3|∆∆∆|",
-    "route_key4": "4|∆∆∆|",
+    "route_key1": "|1∆∆∆|",
+    "route_key2": "|2∆∆∆|",
+    "route_key3": "|3∆∆∆|",
+    "route_key4": "|4∆∆∆|",
     "route_key5": "|∆∆∆|",
-    "route_key101": "101|∆∆∆|",
-    "route_key1001": "1001|∆∆∆|",
-    
+    "route_key101": "|101∆∆∆|",
+    "route_key1001": "|1001∆∆∆|",
+     
     
     "route2XX": ["/txt/", "/ajax_top/"],
     "route3XX": ["/book/", "/class_"],
