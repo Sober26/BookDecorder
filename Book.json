@@ -713,7 +713,7 @@
                     {
                         "value": "\"",
                         "direction": 1
-                    },
+                    }
                 ],
                 "name": [
                     {
@@ -1733,14 +1733,13 @@
             "urlContains": ["/novel/"],
             "adPrefix": "<center>",
             "adSuffix": "</center>",
-            "prev": "#__layout > div > div > div.frame_body > div.prev_page > a",
-            "next": "#__layout > div > div > div.frame_body > div.next_page_links > a:nth-child(1)",
             "containDiv": "class=\"prev_page\">",
             "rawContent1": "/html/body/div[1]/div/div/div/div[2]/div[5]",
             "rawContent2": "/html/body/div[1]/div/div/div/div[2]/div[6]",
             "chapterName1":"/html/body/div[1]/div/div/div/div[2]/div[4]/h1",
             "chapterName2":"/html/body/div[1]/div/div/div/div[2]/div[5]/h1",
-            
+            "prevURLContains": "<div class=\"prev_page\">",
+            "nextURLContains": "<div class=\"next_page",
             "content": [
                 {
                     "value": "</a>  <p>",
@@ -1751,7 +1750,34 @@
                     "direction": 1
                 }
             ],
-            "adContent": []
+            "prevURLContent": [
+                {
+                    "value": "<div class=\"prev_page\">",
+                    "direction": 2
+                },
+                {
+                    "value": "\" ",
+                    "direction": 1
+                },
+                {
+                    "value": "<a href=\"",
+                    "direction": 2
+                }
+            ],
+            "nextURLContent": [
+                {
+                    "value": "<div class=\"next_page_links\">",
+                    "direction": 2
+                },
+                {
+                    "value": "\" ",
+                    "direction": 1
+                },
+                {
+                    "value": "<a href=\"",
+                    "direction": 2
+                }
+            ]
         },
         "route5": {
             "urlContains": ["read"],
