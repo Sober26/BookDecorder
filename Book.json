@@ -1752,6 +1752,7 @@
             ],
             "prevURLContent": [
                 {
+                    "trim": true,
                     "value": "<div class=\"prev_page\">",
                     "direction": 2
                 },
@@ -1766,6 +1767,7 @@
             ],
             "nextURLContent": [
                 {
+                    "trim": true,
                     "value": "<div class=\"next_page_links\">",
                     "direction": 2
                 },
@@ -1929,7 +1931,7 @@
         }
     },
     
-    "version": "406",
+    "version": "407",
     "watchCount": 50,
     "hasRestricted": false,
     "ss1OO": ["我要色色"],
