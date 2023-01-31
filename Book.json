@@ -1015,8 +1015,8 @@
             },
             
             "hotRecommend": {
-                "prefixs": ["https://"],
                 "suffixs": [".html"],
+                "contains": ["novel"],
                 "content": [
                     {
                         "value": "新書搶鮮</h3>",
