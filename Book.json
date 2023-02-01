@@ -1501,6 +1501,7 @@
             "category": "//*[@id=\"bookDetailWrapper\"]/div/div[1]/div/p[3]/span",
             "updateTime": "//*[@id=\"scroll\"]/div[1]/div/div[3]/a/div[2]/p/text()[1]",
             "updateTimePrefix": "最新章節 : ",
+            "invalidCategorys": ["tag-small"],
             "categoryItems": [
                 [
                     {
@@ -2167,101 +2168,53 @@
             }
         },
         "route102": {
-            "imageKey": "ΩΩΩΩ",
-            "imageHTML": "<div class=\"divimage\">",
-            "imageHTML2": "<img src=\"",
-            "imageCount": 3,
-            "needPutImageKey": "|Ω≈Ω|",
-            "urlContains": ["/novel/"],
-            "replaceText": ["<div id=\"acontent\" \"acontent"],
-            "containsContent": [
-                {
-                    "value": "<div class",
-                    "direction": 1
-                }
-            ],
+            "urlContains": ["cid="],
             "prevURLContent":[
                 {
-                    "value": "url_previous:'",
+                    "value": "<div class=\"page_chapter\">",
                     "direction": 2
                 },
                 {
-                    "value": "',",
+                    "value": "\" class=\"p1\">",
                     "direction": 1
+                },
+                {
+                    "value": "href=\"",
+                    "direction": 2
                 }
             ],
             "nextURLContent":[
                 {
-                    "value":  "url_next:'",
+                    "value": "<div class=\"page_chapter\">",
                     "direction": 2
                 },
                 {
-                    "value": "',",
+                    "value":  "\" class=\"p4\">",
                     "direction": 1
+                },
+                {
+                    "value": "href=\"",
+                    "direction": 2
                 }
             ],
             "rawContent": "/html/body/div/div[2]/div[3]",
             "chapterName":"/html/body/div/div[2]/h1",
             "content": [
                 {
-                    "value": "<div class=\"divimage\">",
-                    "direction": 3
+                    "value": "class=\"novelcontent\">",
+                    "direction": 2
                 }
             ],
-            "image": {
-                "prefixs":["https"],
-                "replaceText": ["<div id=\"acontent\" class=\"acontent\">"],
-                "content": [
-                    {
-                        "value": "\"",
-                        "direction": 1
-                    }
-                ],
-                "introductionContent": [
-                    {
-                        "value": "class=\"acontent\">",
-                        "direction": 2
-                    },
-                    {
-                        "value": "<img src=",
-                        "direction": 1
-                    }
-                ]
-            },
-            "text": {
-                "prefixs":["https://"],
-                "contains":["//img"],
-                "imageMark": "<img src=\"",
-                "replaceText": ["<div id=\"acontent\" class=\"acontent\">", "<div class=\"divimage\">"],
-                "imageURLSuffixs": [".jpg", ".jpeg", ".png"],
-                "imageURLContains": [".jpg", ".jpeg", ".png"],
-                "content": [
-                    {
-                        "value": "\"",
-                        "direction": 3
-                    }
-                ],
-                "lastContent": [
-                    {
-                        "value": "<!-- <p",
-                        "direction": 1
-                    }
-                ],
-                "rawTextContent": [
-                    {
-                        "value": "\" class=\"imagecontent\"",
-                        "direction": 1
-                    },
-                    {
-                        "value": "|Ω≈Ω|",
-                        "direction": 2
-                    }
-                ],
-                "hasPrefixs":["//img"],
-                "urlPrefix":"https:",
-                "splitText": "\">",
-                "splitIndex": 1
-            }
+            "introductionContent": [
+                {
+                    "value": "class=\"novelcontent\">",
+                    "direction": 2
+                },
+                {
+                    "value": "<div class=",
+                    "direction": 1
+                }
+            ]
         },
         "route1001": {
             "replaceText": ["<div class=\"content\">"],
@@ -2294,6 +2247,7 @@
     "watchCount": 50,
     "hasRestricted": false,
     "ss1OO": ["我要色色"],
+    "linovelCodes": ["l_n", "L_N"],
     
     "route1": "https://tw.uukanshu.com",
     "route2": "https://www.69shu.com",
@@ -2326,7 +2280,7 @@
     
     "route1001Prefix": "https:",
     "route1001ChapterKey": "chapterNumber=",
-    "validChapterURL": ["/n/"],
+    "validChapterURL": ["/n/", "cid="],
     
  
     "disclaimer": "1、%@所有內容均收集自其他網站，本APP不參與組織掃圖、翻譯、錄入等工作。\n\n2、本APP僅為學術交流者及寫作愛好者提供試閱，如果你喜歡該作品，請聯繫相關出版機構購買正版。\n\n3、由於我們無法對所有作品的內容進行充分的監測，我們制定了旨在保護知識產權權利人合法權益的措施和步驟，當著作權人和/或依法可以行使信息網絡傳播權的權利人（以下簡稱「權利人」）發現本APP上的內容侵犯其信息網絡傳播權時，權利人應事先向本APP發出權利通知，本APP將根據相關法律規定採取措施刪除/屏蔽相關內容。\n\n如有問題請聯繫我們: ",
@@ -2830,6 +2784,101 @@
             "authorPrefix": "作者 : ",
             "categoryPrefix": "字數 : ",
             "introduction2Condition": "<span class="
+        },
+        "route102": {
+            "itemCount": 20,
+            "content": [
+                {
+                    "value": "div class=\"fl_list\">",
+                    "direction": 2
+                },
+                {
+                    "value": "<div class=\"page\">",
+                    "direction": 1
+                },
+                {
+                    "value": "<div class=\"left\">",
+                    "direction": 3
+                }
+            ],
+            "pathContent": [
+                {
+                    "value": "page=",
+                    "direction": 1
+                }
+            ],
+            "contains": ["aid="],
+            "pathPrefix": "page=",
+            "urlContent": [
+                {
+                    "value": "<p class=\"p1\"><a href=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "nameContent": [
+                {
+                    "value": "<p class=\"p1\">",
+                    "direction": 2
+                },
+                {
+                    "value": "</a>",
+                    "direction": 1
+                },
+                {
+                    "value": "\">",
+                    "direction": 2
+                }
+            ],
+            "imageContent": [
+                {
+                    "value": "<img src=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "authorContent": [
+                {
+                    "value": "<p class=\"p4\">",
+                    "direction": 2
+                },
+                {
+                    "value": "</a>",
+                    "direction": 1
+                },
+                {
+                    "value": "\">",
+                    "direction": 2
+                },
+            ],
+            "categoryContent": [
+                {
+                    "value": "<p class=\"p3\">",
+                    "direction": 2
+                },
+                {
+                    "value": "</p>",
+                    "direction": 1
+                }
+            ],
+            "introductionContent": [
+                {
+                    "value": "<p class=\"p5\">",
+                    "direction": 2
+                },
+                {
+                    "value": "</p>",
+                    "direction": 1
+                }
+            ],
+            "authorPrefix": "作者 : ",
+            "categoryPrefix": "字數 : "
         },
         "route1001": {
             "itemCount": 70,
