@@ -2678,6 +2678,10 @@
                     "direction": 2
                 },
                 {
+                    "value": "</td>",
+                    "direction": 1
+                },
+                {
                     "value": "\">",
                     "direction": 1
                 }
@@ -2855,7 +2859,7 @@
                 {
                     "value": "\">",
                     "direction": 2
-                },
+                }
             ],
             "categoryContent": [
                 {
