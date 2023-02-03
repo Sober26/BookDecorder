@@ -1916,6 +1916,7 @@
         "route1": {
             "prev": "//*[@id=\"prev\"]",
             "next": "//*[@id=\"next\"]",
+            "replaceText": ["[愛筆樓]"],
             "rawContent": "#contentbox",
             "chapterName": "#timu",
             "content": [
