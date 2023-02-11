@@ -2237,9 +2237,6 @@
                     "value": "",
                     "direction": 2
                 }
-            ],
-            "adContent": [
-                
             ]
         }
     },
@@ -2249,7 +2246,7 @@
     "hasRestricted": false,
     "ss1OO": ["我要色色"],
     "linovelCodes": ["l_n", "L_N", "LODENBW"],
-    "invalidRoutes": [],
+    "invalidRoutes": [5],
     
     "route1": "https://tw.uukanshu.com",
     "route2": "https://www.69shu.com",
@@ -2272,13 +2269,7 @@
     "route_key102": "|102∆∆∆|",
     "route_key1001": "|1001∆∆∆|",
      
-    
-    "route2XX": ["/txt/", "/ajax_top/"],
-    "route3XX": ["/book/", "/class_"],
-    "route101XX": ["novel/", "/wenku/"],
-    "route1001XX": ["/n/", "/c/"],
-    
-    
+        
     "route1001Prefix": "https:",
     "route1001ChapterKey": "chapterNumber=",
     "validChapterURL": ["/n/", "cid="],
