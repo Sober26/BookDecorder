@@ -1114,7 +1114,7 @@
         "route102": {
             "title1": "推薦小說",
             "category": {
-                "api": "https://shencou.com/sort.php",
+                "api": "https://m.shencou.com/sort.php",
                 "contains": ["sort.php"],
                 "content": [
                     {
@@ -2256,7 +2256,7 @@
     "route4_1": "https://www.bg3.co",
     "route5": "https://m.dongshansuiwan.com",
     "route101": "https://tw.linovelib.com",
-    "route102": "https://shencou.com",
+    "route102": "https://m.shencou.com",
     "route1001": "https://czbooks.net",
     "route3_1Domain": "www.uukanshu.com",
     
