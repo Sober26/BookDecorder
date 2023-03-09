@@ -1004,7 +1004,7 @@
                         "trim": true
                     },
                     {
-                        "value": "original=\"",
+                        "value": "data-src=\"",
                         "direction": 2
                     },
                     {
@@ -1085,7 +1085,7 @@
                 ],
                 "image": [
                     {
-                        "value": "original=\"",
+                        "value": "data-src=\"",
                         "direction": 2
                     },
                     {
@@ -1100,7 +1100,7 @@
                         "trim": true
                     },
                     {
-                        "value": "original=\"",
+                        "value": "data-src=\"",
                         "direction": 2
                     },
                     {
@@ -2241,9 +2241,10 @@
         }
     },
     
-    "version": "408",
+    "version": "4.0.10",
     "watchCount": 50,
     "hasRestricted": false,
+    "checkLatestTransaction": false,
     "ss1OO": ["我要色色"],
     "linovelCodes": ["l_n", "L_N", "LODENBW"],
     "invalidRoutes": [],
