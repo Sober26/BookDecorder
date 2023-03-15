@@ -1494,7 +1494,7 @@
         },
         "route101": {
             "contentXML": false,
-            "image": "//*[@id=\"bookDetailWrapper\"]/div/div[1]/img",
+            "image": "//*[@id=\"bookDetailWrapper\"]/div/div[1]/div[1]/div/img",
             "author": "//*[@id=\"bookDetailWrapper\"]/div/div[1]/div/div/span",
             "summary": "//*[@id=\"bookSummary\"]/content",
             "chapter": "//*[@id=\"scroll\"]/div[1]/div/div[3]/a/div[2]/p/text()[2]",
