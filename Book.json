@@ -1498,14 +1498,14 @@
             "author": "//*[@id=\"bookDetailWrapper\"]/div/div[1]/div/div/span",
             "summary": "//*[@id=\"bookSummary\"]/content",
             "chapter": "//*[@id=\"scroll\"]/div[1]/div/div[3]/a/div[2]/p/text()[2]",
-            "category": "//*[@id=\"bookDetailWrapper\"]/div/div[1]/div/p[3]/span",
+            "category": "//*[@id=\"bookDetailWrapper\"]/div/div[1]/div[2]/p[3]/span",
             "updateTime": "//*[@id=\"scroll\"]/div[1]/div/div[3]/a/div[2]/p/text()[1]",
             "updateTimePrefix": "最新章節 : ",
             "invalidCategorys": ["tag-small"],
             "categoryItems": [
                 [
                     {
-                        "value": "</em><em class=\"tag-small",
+                        "value": "</a></em><em class=\"tag-small",
                         "direction": 1
                     },
                     {
@@ -1515,8 +1515,16 @@
                 ],
                 [
                     {
-                        "value": "</em><em class=\"tag-small red\">",
+                        "value": "</em><em class=\"tag-small orange\">",
+                        "direction": 1
+                    },
+                    {
+                        "value": "\">",
                         "direction": 2
+                    },
+                    {
+                        "value": "</a>",
+                        "direction": 1
                     },
                     {
                         "value": "</em>",
