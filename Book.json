@@ -2253,6 +2253,7 @@
     "watchCount": 50,
     "txtChunkSize": 10000,
     "hasRestricted": false,
+    "allowedPurchase": true,
     "needsResetWatchCount": true,
     "checkLatestTransaction": false,
     "ss1OO": ["我要色色", "lsp"],
