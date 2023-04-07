@@ -2252,6 +2252,8 @@
     "version": "4.1.0",
     "watchCount": 50,
     "txtChunkSize": 10000,
+    "expirationDate2": 30,
+    "expirationDate3": 7,
     "hasRestricted": false,
     "allowedPurchase": true,
     "needsResetWatchCount": true,
@@ -2259,7 +2261,7 @@
     "ss1OO": ["我要色色", "lsp"],
     "linovelCodes": ["l_n", "L_N", "LODENBW"],
     "invalidRoutes": [],
-    
+   
     "route1": "https://tw.uukanshu.com",
     "route2": "https://www.69shu.com",
     "route3": "https://uukanshu.cc",
