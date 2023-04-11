@@ -2287,11 +2287,12 @@
     "route_key101": "|101∆∆∆|",
     "route_key102": "|102∆∆∆|",
     "route_key1001": "|1001∆∆∆|",
-     
         
     "route1001Prefix": "https:",
     "route1001ChapterKey": "chapterNumber=",
     "validChapterURL": ["/n/", "cid="],
+    
+    "discordGroupLink": "https://discord.gg/qR2qCZAYmw",
     
     "txtChapterKey": "_____",
     "disclaimer": "1、%@所有內容均收集自其他網站，本APP不參與組織掃圖、翻譯、錄入等工作。\n\n2、本APP僅為學術交流者及寫作愛好者提供試閱，如果你喜歡該作品，請聯繫相關出版機構購買正版。\n\n3、由於我們無法對所有作品的內容進行充分的監測，我們制定了旨在保護知識產權權利人合法權益的措施和步驟，當著作權人和/或依法可以行使信息網絡傳播權的權利人（以下簡稱「權利人」）發現本APP上的內容侵犯其信息網絡傳播權時，權利人應事先向本APP發出權利通知，本APP將根據相關法律規定採取措施刪除/屏蔽相關內容。\n\n如有問題請聯繫我們: ",
