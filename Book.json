@@ -1921,6 +1921,11 @@
     
     "content": {
         "replaceText": ["article", "/article", "id=\"nr\""],
+        "ignoreContentDict": {
+            "為您提供": "最新章節！",
+            "大神": "『』"
+        },
+        
         "route1": {
             "prev": "//*[@id=\"prev\"]",
             "next": "//*[@id=\"next\"]",
