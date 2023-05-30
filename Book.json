@@ -4,7 +4,9 @@
             "title1": "熱門小說推薦",
             "title2": "最近更新",
             "latest": {
-                "contains": ["a href="],
+                "contains": [
+                    "a href="
+                ],
                 "content": [
                     {
                         "value": "fldh\">",
@@ -90,9 +92,10 @@
                     }
                 ]
             },
-            
             "category": {
-                "contains": [".html"],
+                "contains": [
+                    ".html"
+                ],
                 "content": [
                     {
                         "value": "lastread.aspx",
@@ -124,9 +127,10 @@
                     }
                 ]
             },
-            
             "recommend": {
-                "contains": ["a href="],
+                "contains": [
+                    "a href="
+                ],
                 "content": [
                     {
                         "value": "tjxslb\">",
@@ -172,9 +176,10 @@
                     }
                 ]
             },
-            
             "hotRecommend": {
-                "contains": ["a href="],
+                "contains": [
+                    "a href="
+                ],
                 "content": [
                     {
                         "value": "zxxslb\">",
@@ -241,14 +246,15 @@
                 ]
             }
         },
-        
         "route2": {
             "title1": "熱門小說推薦",
             "title2": "最近更新",
             "latest": {
                 "count": 19,
                 "xpath": "/html/body/div[3]/ul/li[1]/div[2]/div/ul/li",
-                "suffixs": ["htm"],
+                "suffixs": [
+                    "htm"
+                ],
                 "content": [
                     {
                         "value": "<a href=\"",
@@ -303,14 +309,18 @@
                         "direction": 1
                     }
                 ]
-                
             },
-            
             "category": {
                 "api": "https://www.69shu.com/top/0.htm",
                 "xpath": "/html/body/div[3]/div/div[1]/ul",
-                "contains": [".html", ".htm"],
-                "replaceText": ["top", "ajax_top"],
+                "contains": [
+                    ".html",
+                    ".htm"
+                ],
+                "replaceText": [
+                    "top",
+                    "ajax_top"
+                ],
                 "content": [
                     {
                         "value": "<a href=\"",
@@ -334,11 +344,14 @@
                     }
                 ]
             },
-            
             "recommend": {
                 "xpath": "/html/body/div[3]/ul/li[1]/div[1]/div[2]/ul",
-                "prefixs": ["https://"],
-                "suffixs": ["htm"],
+                "prefixs": [
+                    "https://"
+                ],
+                "suffixs": [
+                    "htm"
+                ],
                 "content": [
                     {
                         "value": "<a href=\"",
@@ -376,12 +389,14 @@
                     }
                 ]
             },
-            
             "hotRecommend": {
                 "xpath": "/html/body/div[3]/ul/li[1]/div[1]/div[1]/ul",
-                "prefixs": ["https://"],
-                "suffixs": ["htm"],
-            
+                "prefixs": [
+                    "https://"
+                ],
+                "suffixs": [
+                    "htm"
+                ],
                 "content": [
                     {
                         "value": "<a href=\"",
@@ -440,14 +455,17 @@
                 ]
             }
         },
-        
         "route3": {
             "title1": "熱門小說推薦",
             "title2": "最近更新",
             "latest": {
                 "xpath": "//*[@id=\"gengxin\"]/ul",
-                "contains": ["/book/"],
-                "replaceText": ["<ul>\n<li>\n"],
+                "contains": [
+                    "/book/"
+                ],
+                "replaceText": [
+                    "<ul>\n<li>\n"
+                ],
                 "content": [
                     {
                         "value": "<span class=\"s1\">",
@@ -495,12 +513,15 @@
                     }
                 ]
             },
-            
             "category": {
                 "api": "https://uukanshu.cc/class_1_1.html",
                 "xpath": "//*[@id=\"content\"]/div/div[1]/ul",
-                "suffixs": [".html"],
-                "replaceText": ["<ul>\n<li>"],
+                "suffixs": [
+                    ".html"
+                ],
+                "replaceText": [
+                    "<ul>\n<li>"
+                ],
                 "content": [
                     {
                         "value": "<a href=\"",
@@ -524,11 +545,14 @@
                     }
                 ]
             },
-            
             "recommend": {
                 "xpath": "//*[@id=\"fengtui\"]",
-                "prefixs": ["https://"],
-                "contains": ["/book/"],
+                "prefixs": [
+                    "https://"
+                ],
+                "contains": [
+                    "/book/"
+                ],
                 "content": [
                     {
                         "trim": true,
@@ -571,11 +595,12 @@
                     }
                 ]
             },
-            
             "hotRecommend": {
                 "count": 18,
                 "xpath": "//*[@id=\"fengyou\"]/ul/li",
-                "contains": ["/book/"],
+                "contains": [
+                    "/book/"
+                ],
                 "url": [
                     {
                         "value": "<a href=\"",
@@ -622,14 +647,17 @@
                 ]
             }
         },
-        
         "route4": {
             "title1": "熱門小說推薦",
             "title2": "最近更新",
             "category": {
                 "xpath": "/html/body/div/div/div/div[2]/div/div[1]/div",
-                "prefixs": ["/novel/"],
-                "suffixs": ["/rank"],
+                "prefixs": [
+                    "/novel/"
+                ],
+                "suffixs": [
+                    "/rank"
+                ],
                 "content": [
                     {
                         "value": "<a href=\"",
@@ -653,10 +681,11 @@
                     }
                 ]
             },
-            
             "recommend": {
                 "xpath": "/html/body/div/div/div/div[2]/div/div[3]",
-                "contains": ["/chapters/"],
+                "contains": [
+                    "/chapters/"
+                ],
                 "content": [
                     {
                         "value": "<a href=\"",
@@ -690,10 +719,11 @@
                     }
                 ]
             },
-            
             "hotRecommend": {
                 "xpath": "/html/body/div/div/div/div[2]/div/div[4]",
-                "contains": ["/chapters/"],
+                "contains": [
+                    "/chapters/"
+                ],
                 "content": [
                     {
                         "value": "<div class=\"hot_cell\"",
@@ -744,13 +774,14 @@
                 ]
             }
         },
-        
         "route5": {
             "title1": "熱門小說推薦",
             "title2": "最近更新",
             "latest": {
                 "xpath": "/html/body/article/div/div[1]/div/table/tbody",
-                "suffixs": ["html"],
+                "suffixs": [
+                    "html"
+                ],
                 "content": [
                     {
                         "value": "<tr>",
@@ -798,10 +829,11 @@
                     }
                 ]
             },
-            
             "category": {
                 "xpath": "/html/body/section[2]/div/div/ul",
-                "contains": ["/sort/"],
+                "contains": [
+                    "/sort/"
+                ],
                 "content": [
                     {
                         "value": "<li class=\"col-xs-6\">",
@@ -829,12 +861,13 @@
                     }
                 ]
             },
-            
             "recommend": {
                 "from": 1,
                 "count": 9,
                 "xpath": "/html/body/section[6]/div/div[1]/div[2]/a",
-                "suffixs": ["html"],
+                "suffixs": [
+                    "html"
+                ],
                 "url": [
                     {
                         "value": "\" title=\"",
@@ -866,11 +899,12 @@
                     }
                 ]
             },
-            
             "hotRecommend": {
                 "dropFirstCount": 1,
                 "dropLastCount": 1,
-                "suffixs": [".html"],
+                "suffixs": [
+                    ".html"
+                ],
                 "contentValue": "<div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12 vv-xqimg\">",
                 "content": [
                     {
@@ -910,12 +944,13 @@
                 ]
             }
         },
-        
         "route101": {
             "title1": "推薦小說",
             "category": {
                 "api": "https://tw.linovelib.com/sort/",
-                "suffixs": [".html"],
+                "suffixs": [
+                    ".html"
+                ],
                 "content": [
                     {
                         "value": "<footer class=",
@@ -953,10 +988,13 @@
                     }
                 ]
             },
-            
             "recommend": {
-                "prefixs": ["https://"],
-                "suffixs": ["html"],
+                "prefixs": [
+                    "https://"
+                ],
+                "suffixs": [
+                    "html"
+                ],
                 "content": [
                     {
                         "value": "module-slide-ol module-bjqt\">",
@@ -1013,10 +1051,13 @@
                     }
                 ]
             },
-            
             "hotRecommend": {
-                "suffixs": [".html"],
-                "contains": ["novel"],
+                "suffixs": [
+                    ".html"
+                ],
+                "contains": [
+                    "novel"
+                ],
                 "content": [
                     {
                         "value": "新書搶鮮</h3>",
@@ -1080,7 +1121,7 @@
                     },
                     {
                         "value": "\">",
-                        "direction":2
+                        "direction": 2
                     }
                 ],
                 "image": [
@@ -1110,12 +1151,13 @@
                 ]
             }
         },
-        
         "route102": {
             "title1": "推薦小說",
             "category": {
                 "api": "https://m.shencou.com/sort.php",
-                "contains": ["sort.php"],
+                "contains": [
+                    "sort.php"
+                ],
                 "content": [
                     {
                         "value": "<div class=\"sortlist\">",
@@ -1151,9 +1193,10 @@
                     }
                 ]
             },
-            
             "recommend": {
-                "contains": ["/info.php?aid="],
+                "contains": [
+                    "/info.php?aid="
+                ],
                 "content": [
                     {
                         "value": "<div class=\"menu_wz\">",
@@ -1203,11 +1246,12 @@
                     }
                 ]
             },
-            
             "hotRecommend": {
                 "dropFirstCount": 2,
                 "dropLastCount": 1,
-                "contains": ["/info.php?aid="],
+                "contains": [
+                    "/info.php?aid="
+                ],
                 "contentValue": "<div class=\"gengduo\">",
                 "content": [
                     {
@@ -1251,7 +1295,6 @@
                 ]
             }
         },
-        
         "route1001": {
             "title1": "熱門小說推薦",
             "title2": "最近更新",
@@ -1259,8 +1302,15 @@
                 "from": 1,
                 "count": 18,
                 "xpath": "/html/body/div[1]/div[2]/ul/li",
-                "suffixs": ["/all", "/normal", "/favorite", "/finish"],
-                "xpathContains": ["czbooks.net/c/"],
+                "suffixs": [
+                    "/all",
+                    "/normal",
+                    "/favorite",
+                    "/finish"
+                ],
+                "xpathContains": [
+                    "czbooks.net/c/"
+                ],
                 "content": [
                     {
                         "value": "<a href=\"",
@@ -1284,10 +1334,11 @@
                     }
                 ]
             },
-            
             "recommend": {
                 "xpath": "/html/body/div[5]/div/ul[2]",
-                "contains": ["/n/"],
+                "contains": [
+                    "/n/"
+                ],
                 "content": [
                     {
                         "value": "<div class=\"novel-item-cover-wrapper\">",
@@ -1329,10 +1380,11 @@
                     }
                 ]
             },
-            
             "hotRecommend": {
                 "xpath": "/html/body/div[5]/div/ul[1]",
-                "contains": ["/n/"],
+                "contains": [
+                    "/n/"
+                ],
                 "content": [
                     {
                         "value": "<div class=\"novel-item-cover-wrapper\">",
@@ -1376,13 +1428,12 @@
             }
         }
     },
-    
-    
- 
     "detail": {
         "route1": {
             "contentXML": true,
-            "replaceText": ["小說"],
+            "replaceText": [
+                "小說"
+            ],
             "image": "/html/body/div[4]/dl/dt/a/img",
             "author": "/html/body/div[4]/dl/dd/h2/a",
             "summary": "/html/body/div[4]/dl/dd/h3",
@@ -1407,17 +1458,19 @@
             "chapter": "/html/body/div[2]/div[1]/div[1]/div[2]/p[3]/a",
             "category": "/html/body/div[2]/div[1]/div[1]/div[2]/p[1]/span[2]",
             "updateTime": "/html/body/div[2]/div[1]/div[1]/div[2]/p[4]",
-            "summaryReplaceText": ["br/", "<span class=\"noshow\">"]
+            "summaryReplaceText": [
+                "br/",
+                "<span class=\"noshow\">"
+            ]
         },
         "route4": {
             "contentXML": true,
             "image": "/html/body/div/div/div/div[2]/div/div[2]/div[1]",
             "author": "/html/body/div/div/div/div[2]/div/div[2]/div[2]/ul/li[2]/a",
-            "summary": "/html/body/div/div/div/div[2]/div/div[4]/div/p",
+            "summary": "/html/body/div/div/div/div[2]/div/div[5]/div/p",
             "chapter": "/html/body/div/div/div/div[2]/div/div[5]/h4/a",
             "category": "/html/body/div/div/div/div[2]/div/div[2]/div[2]/ul/li[3]/text()",
             "updateTime": "/html/body/div/div/div/div[2]/div/div[5]/time",
-            
             "imageContent": [
                 {
                     "value": "img src=\"",
@@ -1501,7 +1554,9 @@
             "category": "//*[@id=\"bookDetailWrapper\"]/div/div[1]/div[2]/p[3]/span",
             "updateTime": "//*[@id=\"scroll\"]/div[1]/div/div[3]/a/div[2]/p/text()[1]",
             "updateTimePrefix": "最新章節 : ",
-            "invalidCategorys": ["tag-small"],
+            "invalidCategorys": [
+                "tag-small"
+            ],
             "categoryItems": [
                 [
                     {
@@ -1549,7 +1604,6 @@
             "summary": "/html/body/div[5]/div[1]/div[1]/div[4]",
             "category": "/html/body/div[5]/div[1]/div[1]/div[2]",
             "updateTime": "/html/body/div[5]/div[1]/div[1]/div[2]",
-            
             "categoryContent": [
                 {
                     "value": "\">",
@@ -1576,14 +1630,30 @@
             ]
         }
     },
-    
     "chapters": {
-        "reversed": [2, 3, 4, 5, 101, 102, 1001],
+        "reversed": [
+            2,
+            3,
+            4,
+            5,
+            101,
+            102,
+            1001
+        ],
         "route1": {
             "contentXML": false,
-            "prefixs": ["/b/"],
-            "suffixs": [".html"],
-            "replaceText": ["</a>", "</li>", "&#13", ";"],
+            "prefixs": [
+                "/b/"
+            ],
+            "suffixs": [
+                ".html"
+            ],
+            "replaceText": [
+                "</a>",
+                "</li>",
+                "&#13",
+                ";"
+            ],
             "content": [
                 {
                     "value": "chapterList",
@@ -1619,7 +1689,9 @@
             "apiPrefix": "https://www.69shu.com/",
             "apiSuffix": "/",
             "contentXML": false,
-            "prefixs": ["/txt/"],
+            "prefixs": [
+                "/txt/"
+            ],
             "content": [
                 {
                     "value": "id=\"catalog\">",
@@ -1628,8 +1700,7 @@
                 {
                     "value": "   </ul>\n",
                     "direction": 1
-                }
-                ,
+                },
                 {
                     "value": "<li data-num=",
                     "direction": 3
@@ -1666,8 +1737,12 @@
         },
         "route3": {
             "contentXML": false,
-            "prefixs": ["/book/"],
-            "suffixs": [".html"],
+            "prefixs": [
+                "/book/"
+            ],
+            "suffixs": [
+                ".html"
+            ],
             "content": [
                 {
                     "value": "<a href=\"",
@@ -1697,7 +1772,9 @@
         },
         "route4": {
             "contentXML": true,
-            "contains": ["/novel/"],
+            "contains": [
+                "/novel/"
+            ],
             "content": [
                 {
                     "value": "<div class=\"full_chapters\"><div>",
@@ -1731,7 +1808,9 @@
         },
         "route5": {
             "contentXML": true,
-            "suffixs": [".html"],
+            "suffixs": [
+                ".html"
+            ],
             "content": [
                 {
                     "value": "<section class=\"container booklist\">",
@@ -1771,10 +1850,19 @@
             "apiPrefix": "https://tw.linovelib.com/novel/",
             "apiSuffix": "/catalog",
             "contentXML": false,
-            "prefixs": ["/novel/"],
-            "suffixs": [".html"],
-            "sectionSuffixs": ["</li>"],
-            "replaceText": ["&#039;", "</li>"],
+            "prefixs": [
+                "/novel/"
+            ],
+            "suffixs": [
+                ".html"
+            ],
+            "sectionSuffixs": [
+                "</li>"
+            ],
+            "replaceText": [
+                "&#039;",
+                "</li>"
+            ],
             "content": [
                 {
                     "value": "chapter-ol-catalog\">",
@@ -1820,9 +1908,20 @@
         },
         "route102": {
             "contentXML": false,
-            "contains": ["/chapter.php?aid="],
-            "sectionPrefixs": ["&gt;&gt;", ">>"],
-            "replaceText": ["&#039;", "</li>", "&gt;", ">>", "<<"],
+            "contains": [
+                "/chapter.php?aid="
+            ],
+            "sectionPrefixs": [
+                "&gt;&gt;",
+                ">>"
+            ],
+            "replaceText": [
+                "&#039;",
+                "</li>",
+                "&gt;",
+                ">>",
+                "<<"
+            ],
             "replacingText": {
                 ">": " "
             },
@@ -1883,7 +1982,9 @@
         },
         "route1001": {
             "contentXML": true,
-            "contains": ["/n/"],
+            "contains": [
+                "/n/"
+            ],
             "content": [
                 {
                     "value": "<ul class=\"nav chapter-list\"",
@@ -1916,21 +2017,23 @@
             ]
         }
     },
-    
-    
-    
     "content": {
-        "replaceText": ["article", "/article", "id=\"nr\""],
+        "replaceText": [
+            "article",
+            "/article",
+            "id=\"nr\""
+        ],
         "ignoreContentDict": {
             "為您提供": "最新章節！",
             "本章未完": "繼續閱讀",
             "大神": "『』"
         },
-        
         "route1": {
             "prev": "//*[@id=\"prev\"]",
             "next": "//*[@id=\"next\"]",
-            "replaceText": ["[愛筆樓]"],
+            "replaceText": [
+                "[愛筆樓]"
+            ],
             "rawContent": "#contentbox",
             "chapterName": "#timu",
             "content": [
@@ -1949,11 +2052,11 @@
             ],
             "adContent": [
                 {
-                    "value":  "<div class=\"ad_content\">",
+                    "value": "<div class=\"ad_content\">",
                     "direction": 1
                 },
                 {
-                    "value":  "</script>\n</div>",
+                    "value": "</script>\n</div>",
                     "direction": 2
                 }
             ],
@@ -1965,15 +2068,17 @@
             "prev": "body > div.container > div > div.page1 > a:nth-child(1)",
             "next": "body > div.container > div > div.page1 > a:nth-child(4)",
             "rawContent": "/html/body/div[3]/div/div[3]",
-            "chapterName":"/html/body/div[3]/div/div[3]/h1",
+            "chapterName": "/html/body/div[3]/div/div[3]/h1",
             "chapterNamePrefix": "第",
-            "chapterNameContent":[
+            "chapterNameContent": [
                 {
                     "value": ".第",
                     "direction": 2
                 }
             ],
-            "contains":["<p class=\"readcotent bbb font-normal\">"],
+            "contains": [
+                "<p class=\"readcotent bbb font-normal\">"
+            ],
             "content": [
                 {
                     "value": "<p class=\"readcotent bbb font-normal\">",
@@ -1996,12 +2101,20 @@
             ]
         },
         "route3": {
-            "urlSuffixs": [".html"],
+            "urlSuffixs": [
+                ".html"
+            ],
             "prev": "//*[@id=\"linkPrev\"]",
             "next": "//*[@id=\"linkNext\"]",
             "rawContent": "/html/body/div[2]/div[1]/div/p[2]",
-            "chapterName":"/html/body/div[2]/div[1]/div/h1",
-            "rawContentReplaceText": ["<p class=\"readcotent bbb font-normal\">", "bbb", "<p class", "readcotent", "font-normal"],
+            "chapterName": "/html/body/div[2]/div[1]/div/h1",
+            "rawContentReplaceText": [
+                "<p class=\"readcotent bbb font-normal\">",
+                "bbb",
+                "<p class",
+                "readcotent",
+                "font-normal"
+            ],
             "content": [
                 {
                     "value": "readcotent bbb font-normal\">",
@@ -2015,15 +2128,19 @@
         },
         "route4": {
             "regulerURL": "www.ttkan.co/",
-            "replaceText": ["<div class=\"content\">"],
-            "urlContains": ["/novel/"],
+            "replaceText": [
+                "<div class=\"content\">"
+            ],
+            "urlContains": [
+                "/novel/"
+            ],
             "adPrefix": "<center>",
             "adSuffix": "</center>",
             "containDiv": "class=\"prev_page\">",
             "rawContent1": "/html/body/div[1]/div/div/div/div[2]/div[5]",
             "rawContent2": "/html/body/div[1]/div/div/div/div[2]/div[6]",
-            "chapterName1":"/html/body/div[1]/div/div/div/div[2]/div[4]/h1",
-            "chapterName2":"/html/body/div[1]/div/div/div/div[2]/div[5]/h1",
+            "chapterName1": "/html/body/div[1]/div/div/div/div[2]/div[4]/h1",
+            "chapterName2": "/html/body/div[1]/div/div/div/div[2]/div[5]/h1",
             "prevURLContains": "<div class=\"prev_page\">",
             "nextURLContains": "<div class=\"next_page",
             "content": [
@@ -2032,7 +2149,7 @@
                     "direction": 2
                 },
                 {
-                    "value": "<amp-addthis",
+                    "value": "<div class=\"social_share_frame\">",
                     "direction": 1
                 }
             ],
@@ -2068,11 +2185,13 @@
             ]
         },
         "route5": {
-            "urlContains": ["article"],
+            "urlContains": [
+                "article"
+            ],
             "prev": "/html/body/footer/div/a[2]",
             "next": "/html/body/footer/div/a[4]",
             "rawContent": "/html/body/section[3]/div/div[2]/article",
-            "chapterName":"/html/body/section[3]/div/div[2]/h1",
+            "chapterName": "/html/body/section[3]/div/div[2]/h1",
             "content": [
                 {
                     "value": "<article class=\"content\">",
@@ -2090,15 +2209,19 @@
             "imageHTML2": "<img src=\"",
             "imageCount": 3,
             "needPutImageKey": "|Ω≈Ω|",
-            "urlContains": ["/novel/"],
-            "replaceText": ["<div id=\"acontent\" \"acontent"],
+            "urlContains": [
+                "/novel/"
+            ],
+            "replaceText": [
+                "<div id=\"acontent\" \"acontent"
+            ],
             "containsContent": [
                 {
                     "value": "<div class",
                     "direction": 1
                 }
             ],
-            "prevURLContent":[
+            "prevURLContent": [
                 {
                     "value": "url_previous:'",
                     "direction": 2
@@ -2108,9 +2231,9 @@
                     "direction": 1
                 }
             ],
-            "nextURLContent":[
+            "nextURLContent": [
                 {
-                    "value":  "url_next:'",
+                    "value": "url_next:'",
                     "direction": 2
                 },
                 {
@@ -2119,8 +2242,8 @@
                 }
             ],
             "rawContent": "//*[@id=\"acontent\"]",
-            "chapterName":"/html/body/div[1]/div[2]/div/div[1]/h3",
-            "chapterName2":"/html/body/div[1]/div[2]/div/div[1]/h1",
+            "chapterName": "/html/body/div[1]/div[2]/div/div[1]/h3",
+            "chapterName2": "/html/body/div[1]/div[2]/div/div[1]/h1",
             "content": [
                 {
                     "value": "<div class=\"divimage\">",
@@ -2128,8 +2251,12 @@
                 }
             ],
             "image": {
-                "prefixs":["https"],
-                "replaceText": ["<div id=\"acontent\" class=\"acontent\">"],
+                "prefixs": [
+                    "https"
+                ],
+                "replaceText": [
+                    "<div id=\"acontent\" class=\"acontent\">"
+                ],
                 "content": [
                     {
                         "value": "\"",
@@ -2148,12 +2275,27 @@
                 ]
             },
             "text": {
-                "prefixs":["https://"],
-                "contains":["//img"],
+                "prefixs": [
+                    "https://"
+                ],
+                "contains": [
+                    "//img"
+                ],
                 "imageMark": "<img src=\"",
-                "replaceText": ["<div id=\"acontent\" class=\"acontent\">", "<div class=\"divimage\">"],
-                "imageURLSuffixs": [".jpg", ".jpeg", ".png"],
-                "imageURLContains": [".jpg", ".jpeg", ".png"],
+                "replaceText": [
+                    "<div id=\"acontent\" class=\"acontent\">",
+                    "<div class=\"divimage\">"
+                ],
+                "imageURLSuffixs": [
+                    ".jpg",
+                    ".jpeg",
+                    ".png"
+                ],
+                "imageURLContains": [
+                    ".jpg",
+                    ".jpeg",
+                    ".png"
+                ],
                 "content": [
                     {
                         "value": "\"",
@@ -2176,15 +2318,19 @@
                         "direction": 2
                     }
                 ],
-                "hasPrefixs":["//img"],
-                "urlPrefix":"https:",
+                "hasPrefixs": [
+                    "//img"
+                ],
+                "urlPrefix": "https:",
                 "splitText": "\">",
                 "splitIndex": 1
             }
         },
         "route102": {
-            "urlContains": ["cid="],
-            "prevURLContent":[
+            "urlContains": [
+                "cid="
+            ],
+            "prevURLContent": [
                 {
                     "value": "<div class=\"page_chapter\">",
                     "direction": 2
@@ -2198,13 +2344,13 @@
                     "direction": 2
                 }
             ],
-            "nextURLContent":[
+            "nextURLContent": [
                 {
                     "value": "<div class=\"page_chapter\">",
                     "direction": 2
                 },
                 {
-                    "value":  "\" class=\"p4\">",
+                    "value": "\" class=\"p4\">",
                     "direction": 1
                 },
                 {
@@ -2213,7 +2359,7 @@
                 }
             ],
             "rawContent": "/html/body/div/div[2]/div[3]",
-            "chapterName":"/html/body/div/div[2]/h1",
+            "chapterName": "/html/body/div/div[2]/h1",
             "content": [
                 {
                     "value": "class=\"novelcontent\">",
@@ -2232,15 +2378,18 @@
             ]
         },
         "route1001": {
-            "replaceText": ["<div class=\"content\">"],
-            "urlContains": ["/n/"],
+            "replaceText": [
+                "<div class=\"content\">"
+            ],
+            "urlContains": [
+                "/n/"
+            ],
             "prev": "#sticky-parent > div.chapter-detail.style-left > ul > li:nth-child(1) > a",
             "next": "#sticky-parent > div.chapter-detail.style-left > ul > li:nth-child(2) > a",
             "next2": "#sticky-parent > div.chapter-detail.style-left > ul > li > a",
-            
             "rawContent": "/html/body/div[5]/div[2]/div[2]/div[4]",
-            "chapterName":"/html/body/div[5]/div[2]/div[2]/div[3]",
-            "chapterNameContent":[
+            "chapterName": "/html/body/div[5]/div[2]/div[2]/div[3]",
+            "chapterNameContent": [
                 {
                     "value": "》",
                     "direction": 2
@@ -2254,8 +2403,7 @@
             ]
         }
     },
-    
-    "version": "4.1.0",
+    "version": "4.1.3",
     "watchCount": 50,
     "txtChunkSize": 10000,
     "expirationDate2": 30,
@@ -2265,7 +2413,6 @@
     "needsResetWatchCount": true,
     "checkLatestTransaction": false,
     "invalidRoutes": [],
-    
     "route1": "https://tw.uukanshu.com",
     "route2": "https://www.69shu.com",
     "route3": "https://uukanshu.cc",
@@ -2277,7 +2424,6 @@
     "route102": "https://m.shencou.com",
     "route1001": "https://czbooks.net",
     "route3_1Domain": "www.uukanshu.com",
-    
     "route_key1": "|1∆∆∆|",
     "route_key2": "|2∆∆∆|",
     "route_key3": "|3∆∆∆|",
@@ -2286,23 +2432,26 @@
     "route_key101": "|101∆∆∆|",
     "route_key102": "|102∆∆∆|",
     "route_key1001": "|1001∆∆∆|",
-        
     "route1001Prefix": "https:",
     "route1001ChapterKey": "chapterNumber=",
-    "validChapterURL": ["/n/", "cid="],
-        
+    "validChapterURL": [
+        "/n/",
+        "cid="
+    ],
+    
     "txtChapterKey": "_____",
     "disclaimer": "1、%@所有內容均收集自其他網站，本APP不參與組織掃圖、翻譯、錄入等工作。\n\n2、本APP僅為學術交流者及寫作愛好者提供試閱，如果你喜歡該作品，請聯繫相關出版機構購買正版。\n\n3、由於我們無法對所有作品的內容進行充分的監測，我們制定了旨在保護知識產權權利人合法權益的措施和步驟，當著作權人和/或依法可以行使信息網絡傳播權的權利人（以下簡稱「權利人」）發現本APP上的內容侵犯其信息網絡傳播權時，權利人應事先向本APP發出權利通知，本APP將根據相關法律規定採取措施刪除/屏蔽相關內容。\n\n如有問題請聯繫我們: ",
-    
     "list": {
-        "problemURLs":["https://www.69shu.com/ajax_top/7/1.htm"],
+        "problemURLs": [
+            "https://www.69shu.com/ajax_top/7/1.htm"
+        ],
         "route1": {
             "itemFrom": 1,
             "itemCount": 24,
             "itemMultiple": 3,
             "xpath": "/html/body/div[4]/div[1]/span",
             "api": "https://tw.uukanshu.com",
-            "allPagesXPath":  "//*[@id='page']/a[13]",
+            "allPagesXPath": "//*[@id='page']/a[13]",
             "weekRankURLXPath": "/html/body/div[4]/div[2]/ul/li[1]/h2/a",
             "totalRankURLXPath": "/html/body/div[4]/div[2]/ul/li[2]/h2/a",
             "pathPrefix": "-",
@@ -2339,9 +2488,20 @@
             "author": "/div/dl/dt[1]/a",
             "chapter": "/div/dl/dt[2]",
             "introduction": "/div/dl/dt[3]",
-            "nameReplaceText": ["最新章節", "最新章节", "全文閱讀", "全文阅读"],
-            "chapterReplaceText": ["\r\n", "                "],
-            "introductionReplaceText": ["\r\n", "          "],
+            "nameReplaceText": [
+                "最新章節",
+                "最新章节",
+                "全文閱讀",
+                "全文阅读"
+            ],
+            "chapterReplaceText": [
+                "\r\n",
+                "                "
+            ],
+            "introductionReplaceText": [
+                "\r\n",
+                "          "
+            ],
             "urlContent": [
                 {
                     "value": "<div class=\"bookname\">",
@@ -2439,7 +2599,10 @@
                     "direction": 1
                 }
             ],
-            "contains": [".htm", "/txt/"],
+            "contains": [
+                ".htm",
+                "/txt/"
+            ],
             "pathPrefix": "/",
             "pathSuffix": ".htm",
             "urlContent": [
@@ -2524,7 +2687,9 @@
                     "direction": 3
                 }
             ],
-            "prefixs": ["https://"],
+            "prefixs": [
+                "https://"
+            ],
             "pathSymbol": "_",
             "pathSuffix": ".html",
             "pathSuffix2": "_",
@@ -2533,7 +2698,10 @@
             "author": "/div[1]",
             "chapter": "/div[4]/a",
             "introduction": "/div[5]/text()",
-            "introductionReplaceText": ["br/","<span class=\"noshow\">"]
+            "introductionReplaceText": [
+                "br/",
+                "<span class=\"noshow\">"
+            ]
         },
         "route4": {
             "itemCount": 18,
@@ -2636,8 +2804,12 @@
                     "direction": 1
                 }
             ],
-            "suffixs": [".html"],
-            "contains": ["/article/"],
+            "suffixs": [
+                ".html"
+            ],
+            "contains": [
+                "/article/"
+            ],
             "pagesXPath": "/html/body/section[3]/div/div[1]/ul/li[1]/a",
             "pathPrefix": "/",
             "pathSuffix": ".html",
@@ -2712,7 +2884,9 @@
                     "direction": 3
                 }
             ],
-            "contains": ["/novel/"],
+            "contains": [
+                "/novel/"
+            ],
             "pathSymbol": "/",
             "pathSuffix": ".html",
             "pathSuffix2": "/",
@@ -2820,7 +2994,9 @@
                     "direction": 1
                 }
             ],
-            "contains": ["aid="],
+            "contains": [
+                "aid="
+            ],
             "pathPrefix": "page=",
             "urlContent": [
                 {
@@ -2912,7 +3088,9 @@
                     "direction": 3
                 }
             ],
-            "contains": ["/n/"],
+            "contains": [
+                "/n/"
+            ],
             "pathPrefix": "/",
             "urlContent": [
                 {
@@ -2988,13 +3166,16 @@
             ]
         }
     },
-    
     "search": {
         "route1": {
             "tokenXPath": "//*[@id='head']/div/script",
             "xpath": "/html/body/div[4]/div[1]/span",
-            "suffixs": [".html"],
-            "contains": ["/b/"],
+            "suffixs": [
+                ".html"
+            ],
+            "contains": [
+                "/b/"
+            ],
             "content": [
                 {
                     "value": "\"results\": [\n    ",
@@ -3015,7 +3196,10 @@
                     "direction": 1
                 }
             ],
-            "jsonReplaceText": ["\\u003cb\\u003e", "\\u003c/b\\u003e"]
+            "jsonReplaceText": [
+                "\\u003cb\\u003e",
+                "\\u003c/b\\u003e"
+            ]
         },
         "route2": {
             "dropFirstCount": 1,
@@ -3024,9 +3208,16 @@
             "xpath": "/html/body/div[3]/ul/li[1]/div",
             "countXPath": "/html/body/div[3]/div/ul/li/div/h3/b[2]",
             "condition": "bread",
-            "contains": ["/txt/"],
+            "contains": [
+                "/txt/"
+            ],
             "categoryValue": "</label>\n                                            <label>",
-            "categoryReplaceText": ["<label>", "</label>", "<label/>", "\n                                            "],
+            "categoryReplaceText": [
+                "<label>",
+                "</label>",
+                "<label/>",
+                "\n                                            "
+            ],
             "urlXPath": "[1]/div/div[2]/h1/a",
             "nameXPath": "[1]/div/div[2]/h1/a",
             "imageXPath": "[1]/div/div[1]/img",
@@ -3127,9 +3318,18 @@
         "route3": {
             "api": "https://uukanshu.cc/modules/article/search.php?searchkey=",
             "apiSuffix": "&searchtype=all",
-            "prefixs": ["https://uukanshu.cc"],
+            "prefixs": [
+                "https://uukanshu.cc"
+            ],
             "condition": "list-chapterAll",
-            "introductionReplaceText": ["br/","&lt;", "&gt;", "&quot;", "span class=noshow", "span class=\"noshow\""],
+            "introductionReplaceText": [
+                "br/",
+                "&lt;",
+                "&gt;",
+                "&quot;",
+                "span class=noshow",
+                "span class=\"noshow\""
+            ],
             "content": [
                 {
                     "value": "<div class=\"content book\">",
@@ -3258,7 +3458,9 @@
         "route4": {
             "api": "https://www.ttkan.co/novel/search?q=",
             "xpath": "/html/body/div[4]/div[1]/span",
-            "contains": ["/novel/chapters/"],
+            "contains": [
+                "/novel/chapters/"
+            ],
             "content": [
                 {
                     "value": "</amp-autocomplete>",
@@ -3310,7 +3512,7 @@
                 },
                 {
                     "value": "</li>",
-                    "direction":1
+                    "direction": 1
                 }
             ],
             "introductionContent": [
@@ -3328,7 +3530,9 @@
             "api": "https://m.dongshansuiwan.com/search.php",
             "xpath": "/html/body/div[4]/div[1]/span",
             "searchKey": "search",
-            "contains": ["/article/"],
+            "contains": [
+                "/article/"
+            ],
             "content": [
                 {
                     "value": "<section class=\"container top\">",
@@ -3370,7 +3574,7 @@
                 },
                 {
                     "value": "</td>",
-                    "direction":1
+                    "direction": 1
                 },
                 {
                     "value": "\">",
@@ -3402,8 +3606,12 @@
             "api": "https://tw.linovelib.com/S0/?searchkey=",
             "apiSuffix": "&searchtype=all",
             "condition": "<ol class=\"book-ol book-ol-normal\">",
-            "contains": ["/novel/"],
-            "replaceText": ["<span class=\"hot\">"],
+            "contains": [
+                "/novel/"
+            ],
+            "replaceText": [
+                "<span class=\"hot\">"
+            ],
             "categoryItems": [
                 [
                     {
@@ -3573,7 +3781,9 @@
             "api": "https://czbooks.net/s/",
             "apiSuffix": "?q=",
             "xpath": "/html/body/div[5]/div/ul[1]",
-            "contains": ["/n/"],
+            "contains": [
+                "/n/"
+            ],
             "content": [
                 {
                     "value": "nav novel-list style-default\">",
@@ -3629,11 +3839,11 @@
                 },
                 {
                     "value": "</a>",
-                    "direction":1
+                    "direction": 1
                 },
                 {
                     "value": "\">",
-                    "direction":2
+                    "direction": 2
                 }
             ],
             "chapterContent": [
@@ -3653,4 +3863,3 @@
         }
     }
 }
-
