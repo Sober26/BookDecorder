@@ -250,7 +250,7 @@
             "title1": "熱門小說推薦",
             "title2": "最近更新",
             "category": {
-                "api": "https://www.69shuba.com",
+                "api": "https://www.69shuba.pro",
                 "xpath": "/html/body/div[3]/ul/li/div/div[4]/ul",
                 "contains": [
                     "newtag"
@@ -270,7 +270,7 @@
                 ],
                 "url": [
                     {
-                        "value": "https://www.69shuba.com",
+                        "value": "<a href=\"",
                         "direction": 2
                     },
                     {
@@ -286,11 +286,8 @@
                 ]
             },
             "recommend": {
-                "api": "https://www.69shuba.com/novels/male",
+                "api": "https://www.69shuba.pro/novels/male",
                 "xpath": "/html/body/div[3]/div/ul/li/div/div/ul",
-                "prefixs": [
-                    "https://"
-                ],
                 "suffixs": [
                     "htm"
                 ],
@@ -306,7 +303,7 @@
                         "direction": 1
                     },
                     {
-                        "value": "https://www.69shuba.com",
+                        "value": "https://www.69shuba.pro",
                         "direction": 2
                     }
                 ],
@@ -332,11 +329,8 @@
                 ]
             },
             "hotRecommend": {
-                "api": "https://www.69shuba.com/novels/female",
+                "api": "https://www.69shuba.pro/novels/female",
                 "xpath": "/html/body/div[3]/div/ul/li/div/div/ul",
-                "prefixs": [
-                    "https://"
-                ],
                 "suffixs": [
                     "htm"
                 ],
@@ -352,7 +346,7 @@
                         "direction": 1
                     },
                     {
-                        "value": "https://www.69shuba.com",
+                        "value": "https://www.69shuba.pro",
                         "direction": 2
                     }
                 ],
@@ -724,72 +718,32 @@
         "route5": {
             "title1": "熱門小說推薦",
             "title2": "最近更新",
-            "latest": {
-                "xpath": "/html/body/article/div/div[1]/div/table/tbody",
-                "suffixs": [
-                    "html"
-                ],
-                "content": [
-                    {
-                        "value": "<tr>",
-                        "direction": 3
-                    }
-                ],
-                "url": [
-                    {
-                        "value": "\" title=\"",
-                        "direction": 1
-                    },
-                    {
-                        "value": "href=\"",
-                        "direction": 2
-                    }
-                ],
-                "name": [
-                    {
-                        "value": "</a>",
-                        "direction": 1
-                    },
-                    {
-                        "value": "\">",
-                        "direction": 2
-                    }
-                ],
-                "chapter": [
-                    {
-                        "value": "\" title=\"",
-                        "direction": 2
-                    },
-                    {
-                        "value": "\">",
-                        "direction": 1
-                    }
-                ],
-                "updateTime": [
-                    {
-                        "value": "hidden-xs\">",
-                        "direction": 2
-                    },
-                    {
-                        "value": "</td>",
-                        "direction": 1
-                    }
-                ]
-            },
             "category": {
-                "xpath": "/html/body/section[2]/div/div/ul",
-                "contains": [
-                    "/sort/"
+                "excludes": [
+                    "首頁",
+                    "排行"
                 ],
                 "content": [
                     {
-                        "value": "<li class=\"col-xs-6\">",
+                        "value": "<div class=\"nav\">",
+                        "direction": 2
+                    },
+                    {
+                        "value": "<li><a class=\"current\"",
+                        "direction": 2
+                    },
+                    {
+                        "value": "</div>",
+                        "direction": 1
+                    },
+                    {
+                        "value": "<li>",
                         "direction": 3
                     }
                 ],
                 "url": [
                     {
-                        "value": "href=\"",
+                        "value": "<a href=\"",
                         "direction": 2
                     },
                     {
@@ -809,15 +763,158 @@
                 ]
             },
             "recommend": {
-                "from": 1,
-                "count": 9,
-                "xpath": "/html/body/section[6]/div/div[1]/div[2]/a",
-                "suffixs": [
-                    "html"
+                "contains": [
+                    "/xiaoshuo"
+                ],
+                "content": [
+                    {
+                        "value": "<div class=\"recombook\">",
+                        "direction": 2
+                    },
+                    {
+                        "value": " <div id=\"index_last\">",
+                        "direction": 1
+                    },
+                    {
+                        "value": "<dt>",
+                        "direction": 3
+                    }
                 ],
                 "url": [
                     {
-                        "value": "\" title=\"",
+                        "value": "<a href=\"",
+                        "direction": 2
+                    },
+                    {
+                        "value": "\"",
+                        "direction": 1
+                    }
+                ],
+                "name": [
+                    {
+                        "value": "alt=\"",
+                        "direction": 2
+                    },
+                    {
+                        "value": "\"",
+                        "direction": 1
+                    }
+                ],
+                "image": [
+                    {
+                        "value": "\" alt=\"",
+                        "direction": 1
+                    },
+                    {
+                        "value": "\"",
+                        "direction": 2
+                    }
+                ]
+            },
+            "hotRecommend": {}
+        },
+        "route6": {
+            "title1": "熱門小說推薦",
+            "title2": "最近更新",
+            "latest": {
+                "xpath": "/html/body/div[2]/div[4]/div[2]/ul",
+                "contains": [
+                    "/cj/"
+                ],
+                "content": [
+                    {
+                        "value": "<span class=\"s1\">",
+                        "direction": 3
+                    }
+                ],
+                "url": [
+                    {
+                        "value": "class=\"s2\"><a href=\"",
+                        "direction": 2
+                    },
+                    {
+                        "value": "\"",
+                        "direction": 1
+                    }
+                ],
+                "name": [
+                    {
+                        "value": "class=\"s2\"><a href=\"",
+                        "direction": 2
+                    },
+                    {
+                        "value": "</a></span>",
+                        "direction": 1
+                    },
+                    {
+                        "value": "\">",
+                        "direction": 2
+                    }
+                ],
+                "author": [
+                    {
+                        "value": "<span class=\"s4\">",
+                        "direction": 2
+                    },
+                    {
+                        "value": "</span>",
+                        "direction": 1
+                    }
+                ],
+                "category": [
+                    {
+                        "value": "</span>",
+                        "direction": 1
+                    }
+                ]
+            },
+            "category": {
+                "xpath": "/html/body/div[1]/ul",
+                "prefixs": [
+                    "/"
+                ],
+                "content": [
+                    {
+                        "value": "<a href=\"",
+                        "direction": 3
+                    }
+                ],
+                "url": [
+                    {
+                        "value": "\">",
+                        "direction": 1
+                    }
+                ],
+                "name": [
+                    {
+                        "value": "\">",
+                        "direction": 2
+                    },
+                    {
+                        "value": "</a>",
+                        "direction": 1
+                    }
+                ]
+            },
+            "recommend": {
+                "xpath": "/html/body/div[2]/div[1]/div[1]",
+                "contains": [
+                    "/cj/"
+                ],
+                "content": [
+                    {
+                        "trim": true,
+                        "value": "</h2>",
+                        "direction": 2
+                    },
+                    {
+                        "value": "<div class=\"image\">",
+                        "direction": 3
+                    }
+                ],
+                "url": [
+                    {
+                        "value": "\" title=",
                         "direction": 1
                     },
                     {
@@ -827,12 +924,132 @@
                 ],
                 "name": [
                     {
-                        "value": "title=\"",
+                        "value": "\" width=",
+                        "direction": 1
+                    },
+                    {
+                        "value": "\"",
+                        "direction": 2
+                    }
+                ],
+                "image": [
+                    {
+                        "value": "data-original=\"",
                         "direction": 2
                     },
                     {
+                        "value": "\"",
+                        "direction": 1
+                    }
+                ]
+            },
+            "hotRecommend": {
+                "xpath": "/html/body/div[2]/div[1]/div[2]/ul",
+                "contains": [
+                    "/cj/"
+                ],
+                "content": [
+                    {
+                        "value": "<li>\n<span class=\"s1\">",
+                        "direction": 3
+                    }
+                ],
+                "url": [
+                    {
+                        "value": "<a href=\"",
+                        "direction": 2
+                    },
+                    {
+                        "value": "\"",
+                        "direction": 1
+                    }
+                ],
+                "name": [
+                    {
+                        "value": "</a></span>",
+                        "direction": 1
+                    },
+                    {
+                        "value": "\">",
+                        "direction": 2
+                    }
+                ],
+                "author": [
+                    {
+                        "value": "<span class=\"s5\">",
+                        "direction": 2
+                    },
+                    {
+                        "value": "</span>",
+                        "direction": 1
+                    }
+                ],
+                "category": [
+                    {
+                        "value": "</span>",
+                        "direction": 1
+                    }
+                ]
+            }
+        },
+        "route7": {
+            "title1": "熱門小說推薦",
+            "category": {
+                "xpath": "/html/body/div[2]/div[2]/ul",
+                "suffixs": [
+                    ".html"
+                ],
+                "contains": [
+                    "/"
+                ],
+                "content": [
+                    {
+                        "value": "href=\"",
+                        "direction": 3
+                    }
+                ],
+                "url": [
+                    {
                         "value": "\">",
                         "direction": 1
+                    }
+                ],
+                "name": [
+                    {
+                        "value": "\">",
+                        "direction": 2
+                    },
+                    {
+                        "value": "</a>",
+                        "direction": 1
+                    }
+                ]
+            },
+            "recommend": {
+                "xpath": "/html/body/div[3]/div[1]/div[2]",
+                "contains": [
+                    "info/"
+                ],
+                "content": [
+                    {
+                        "value": "<dt><a href=\"",
+                        "direction": 3
+                    }
+                ],
+                "url": [
+                    {
+                        "value": "\"",
+                        "direction": 1
+                    }
+                ],
+                "name": [
+                    {
+                        "value": "</a></dd>",
+                        "direction": 1
+                    },
+                    {
+                        "value": ">",
+                        "direction": 2
                     }
                 ],
                 "image": [
@@ -849,19 +1066,397 @@
             "hotRecommend": {
                 "dropFirstCount": 1,
                 "dropLastCount": 1,
-                "suffixs": [
-                    ".html"
+                "contentValue": "<div class=\"tabstit\">",
+                "contains": [
+                    "info/"
                 ],
-                "contentValue": "<div class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12 vv-xqimg\">",
                 "content": [
                     {
-                        "value": "<a class=\"col-lg-2 col-md-2 col-sm-2 col-xs-5\"",
+                        "value": "<img class=\"",
                         "direction": 3
                     }
                 ],
                 "url": [
                     {
-                        "value": "\" title=\"",
+                        "value": "<dd><a href=\"",
+                        "direction": 2
+                    },
+                    {
+                        "value": "\"",
+                        "direction": 1
+                    }
+                ],
+                "name": [
+                    {
+                        "value": "alt=\"",
+                        "direction": 2
+                    },
+                    {
+                        "value": "\"",
+                        "direction": 1
+                    }
+                ],
+                "image": [
+                    {
+                        "value": "data-original=\"",
+                        "direction": 2
+                    },
+                    {
+                        "value": "\"",
+                        "direction": 1
+                    }
+                ]
+            }
+        },
+        "route8": {
+            "title1": "熱門小說推薦",
+            "category": {
+                "xpath": "/html/body/div[1]/div[2]/ul",
+                "perfixs": [
+                    "/"
+                ],
+                "suffixs": [
+                    "/"
+                ],
+                "content": [
+                    {
+                        "value": "<a id=\"sort1\"",
+                        "direction": 2
+                    },
+                    {
+                        "value": "href=\"",
+                        "direction": 3
+                    }
+                ],
+                "url": [
+                    {
+                        "value": "\">",
+                        "direction": 1
+                    }
+                ],
+                "name": [
+                    {
+                        "value": "\">",
+                        "direction": 2
+                    },
+                    {
+                        "value": "</a>",
+                        "direction": 1
+                    }
+                ]
+            },
+            "recommend": {
+                "xpath": "/html/body/div[3]/div[1]/div[2]",
+                "contains": [
+                    "/book/"
+                ],
+                "content": [
+                    {
+                        "value": "<dt><a href=\"",
+                        "direction": 3
+                    }
+                ],
+                "url": [
+                    {
+                        "value": "\"",
+                        "direction": 1
+                    }
+                ],
+                "name": [
+                    {
+                        "value": "</a></dd>",
+                        "direction": 1
+                    },
+                    {
+                        "value": ">",
+                        "direction": 2
+                    }
+                ],
+                "image": [
+                    {
+                        "value": "data-src=\"",
+                        "direction": 2
+                    },
+                    {
+                        "value": "\"",
+                        "direction": 1
+                    }
+                ]
+            },
+            "hotRecommend": {
+                "dropFirstCount": 1,
+                "dropLastCount": 1,
+                "contentValue": "<div class=\"tabstit\">",
+                "contains": [
+                    "/book/"
+                ],
+                "content": [
+                    {
+                        "value": "<img class=\"",
+                        "direction": 3
+                    }
+                ],
+                "url": [
+                    {
+                        "value": "<dd><a href=\"",
+                        "direction": 2
+                    },
+                    {
+                        "value": "\"",
+                        "direction": 1
+                    }
+                ],
+                "name": [
+                    {
+                        "value": "alt=\"",
+                        "direction": 2
+                    },
+                    {
+                        "value": "\"",
+                        "direction": 1
+                    }
+                ],
+                "image": [
+                    {
+                        "value": "data-src=\"",
+                        "direction": 2
+                    },
+                    {
+                        "value": "\"",
+                        "direction": 1
+                    }
+                ]
+            }
+        },
+        "route9": {
+            "title1": "熱門小說推薦",
+            "title2": "最近更新",
+            "category": {
+                "api": "https://www.piaotianba.com/sort/all/1.html",
+                "xpath": "/html/body/div[1]/ul",
+                "suffixs": [
+                    ".html"
+                ],
+                "content": [
+                    {
+                        "value": "<a href=\"",
+                        "direction": 3
+                    }
+                ],
+                "url": [
+                    {
+                        "value": "\">",
+                        "direction": 1
+                    }
+                ],
+                "name": [
+                    {
+                        "value": "\">",
+                        "direction": 2
+                    },
+                    {
+                        "value": "</a>",
+                        "direction": 1
+                    }
+                ]
+            },
+            "recommend": {
+                "xpath": "/html/body/div[1]/div[1]/div[2]/div",
+                "prefixs": [
+                    "https://"
+                ],
+                "contains": [
+                    ".com/"
+                ],
+                "content": [
+                    {
+                        "value": "book-coverlist",
+                        "direction": 3
+                    }
+                ],
+                "url": [
+                    {
+                        "value": "<a href=\"",
+                        "direction": 2
+                    },
+                    {
+                        "value": "\"",
+                        "direction": 1
+                    }
+                ],
+                "name": [
+                    {
+                        "value": "title=\"",
+                        "direction": 2
+                    },
+                    {
+                        "value": "\"",
+                        "direction": 1
+                    }
+                ],
+                "image": [
+                    {
+                        "value": "url(",
+                        "direction": 2
+                    },
+                    {
+                        "value": ")\"",
+                        "direction": 1
+                    }
+                ]
+            },
+            "hotRecommend": {
+                "firstBookXpath": "/html/body/div[1]/div[1]/div[2]/div/div[1]/div/div[1]",
+                "xpath": "/html/body/div[1]/div[5]/div[2]/div",
+                "prefixs": [
+                    "https://"
+                ],
+                "contains": [
+                    ".com/"
+                ],
+                "firstBookURL": [
+                    {
+                        "value": "<a href=\"",
+                        "direction": 2
+                    },
+                    {
+                        "value": "\"",
+                        "direction": 1
+                    }
+                ],
+                "content": [
+                    {
+                        "value": "book-coverlist",
+                        "direction": 3
+                    }
+                ],
+                "url": [
+                    {
+                        "value": "<a href=\"",
+                        "direction": 2
+                    },
+                    {
+                        "value": "\"",
+                        "direction": 1
+                    }
+                ],
+                "name": [
+                    {
+                        "value": "title=\"",
+                        "direction": 2
+                    },
+                    {
+                        "value": "\"",
+                        "direction": 1
+                    }
+                ],
+                "image": [
+                    {
+                        "value": "url(",
+                        "direction": 2
+                    },
+                    {
+                        "value": ")\"",
+                        "direction": 1
+                    }
+                ]
+            }
+        },
+        "route10": {
+            "title1": "熱門小說推薦",
+            "title2": "最近更新",
+            "latest": {
+                "xpath": "/html/body/div[4]/aside/ul",
+                "contains": [
+                    "/novels/"
+                ],
+                "content": [
+                    {
+                        "value": "<li>",
+                        "direction": 3
+                    }
+                ],
+                "url": [
+                    {
+                        "value": "\">",
+                        "direction": 1
+                    },
+                    {
+                        "value": "\"",
+                        "direction": 2
+                    }
+                ],
+                "name": [
+                    {
+                        "value": "</a>",
+                        "direction": 1
+                    },
+                    {
+                        "value": "\">",
+                        "direction": 2
+                    }
+                ],
+                "author": [
+                    {
+                        "value": "author",
+                        "direction": 2
+                    },
+                    {
+                        "value": "</a>",
+                        "direction": 1
+                    },
+                    {
+                        "value": ">",
+                        "direction": 2
+                    }
+                ]
+            },
+            "category": {
+                "api": "https://www.novels.com.tw/nosort/",
+                "xpath": "/html/body/div[2]/div[1]/div/div[2]/div[2]",
+                "contains": [
+                    "/nosort/"
+                ],
+                "suffixs": [
+                    "/"
+                ],
+                "content": [
+                    {
+                        "value": "href=\"",
+                        "direction": 3
+                    }
+                ],
+                "url": [
+                    {
+                        "value": "\"",
+                        "direction": 1
+                    }
+                ],
+                "name": [
+                    {
+                        "value": "</a>",
+                        "direction": 1
+                    },
+                    {
+                        "value": ">",
+                        "direction": 2
+                    }
+                ]
+            },
+            "recommend": {
+                "xpath": "/html/body/div[2]/div/ul",
+                "contains": [
+                    "/novels/"
+                ],
+                "content": [
+                    {
+                        "value": "<div class=\"img_span\">",
+                        "direction": 3
+                    }
+                ],
+                "url": [
+                    {
+                        "value": "\"><img",
                         "direction": 1
                     },
                     {
@@ -875,18 +1470,64 @@
                         "direction": 2
                     },
                     {
-                        "value": "\">",
+                        "value": "\"",
                         "direction": 1
                     }
                 ],
                 "image": [
                     {
-                        "value": "data-original=\"",
+                        "value": "<img src=\"",
                         "direction": 2
                     },
                     {
                         "value": "\"",
                         "direction": 1
+                    }
+                ]
+            },
+            "hotRecommend": {
+                "xpath": "/html/body/div[2]/aside/ul",
+                "contains": [
+                    "/novels/"
+                ],
+                "content": [
+                    {
+                        "value": "<li>",
+                        "direction": 3
+                    }
+                ],
+                "url": [
+                    {
+                        "value": "\">",
+                        "direction": 1
+                    },
+                    {
+                        "value": "\"",
+                        "direction": 2
+                    }
+                ],
+                "name": [
+                    {
+                        "value": "</a>",
+                        "direction": 1
+                    },
+                    {
+                        "value": "\">",
+                        "direction": 2
+                    }
+                ],
+                "author": [
+                    {
+                        "value": "author",
+                        "direction": 2
+                    },
+                    {
+                        "value": "</a>",
+                        "direction": 1
+                    },
+                    {
+                        "value": ">",
+                        "direction": 2
                     }
                 ]
             }
@@ -1048,11 +1689,11 @@
                 ],
                 "name": [
                     {
-                        "value": "class=\"book-title\">",
+                        "value": "alt=\"",
                         "direction": 2
                     },
                     {
-                        "value": "</h4>",
+                        "value": "\"/>",
                         "direction": 1
                     }
                 ],
@@ -1542,14 +2183,14 @@
             ]
         },
         "route5": {
-            "contentXML": true,
+            "contentXML": false,
             "imageContent": [
                 {
                     "value": "<meta property=\"og:image\" content=\"",
                     "direction": 2
                 },
                 {
-                    "value": "\"/>",
+                    "value": "\"",
                     "direction": 1
                 }
             ],
@@ -1559,18 +2200,22 @@
                     "direction": 2
                 },
                 {
-                    "value": "\"/>",
+                    "value": "\"",
                     "direction": 1
                 }
             ],
             "summaryContent": [
                 {
-                    "value": "<meta name=\"description\" content=\"",
+                    "value": "<div id=\"intro_win\"",
                     "direction": 2
                 },
                 {
-                    "value": "\"/>",
+                    "value": "</p></div>",
                     "direction": 1
+                },
+                {
+                    "value": "<div class=\"wrapper\">",
+                    "direction": 2
                 }
             ],
             "categoryContent": [
@@ -1579,7 +2224,7 @@
                     "direction": 2
                 },
                 {
-                    "value": "\"/>",
+                    "value": "\"",
                     "direction": 1
                 }
             ],
@@ -1589,7 +2234,7 @@
                     "direction": 2
                 },
                 {
-                    "value": "\"/>",
+                    "value": "\"",
                     "direction": 1
                 }
             ],
@@ -1599,7 +2244,271 @@
                     "direction": 2
                 },
                 {
-                    "value": "\"/>",
+                    "value": "\"",
+                    "direction": 1
+                }
+            ]
+        },
+        "route6": {
+            "contentXML": false,
+            "imageContent": [
+                {
+                    "value": "<meta property=\"og:image\" content=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "authorContent": [
+                {
+                    "value": "<meta property=\"og:novel:author\" content=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "summaryContent": [
+                {
+                    "value": "<meta property=\"og:description\" content=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "categoryContent": [
+                {
+                    "value": "<meta property=\"og:novel:category\" content=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "chapterContent": [
+                {
+                    "value": "<meta property=\"og:novel:latest_chapter_name\" content=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "updateTimeContent": [
+                {
+                    "value": "<meta property=\"og:novel:update_time\" content=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ]
+        },
+        "route7": {
+            "contentXML": false,
+            "imageContent": [
+                {
+                    "value": "<meta property=\"og:image\" content=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "authorContent": [
+                {
+                    "value": "<meta property=\"og:novel:author\" content=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "summaryContent": [
+                {
+                    "value": "<meta property=\"og:description\" content=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "categoryContent": [
+                {
+                    "value": "<meta property=\"og:novel:category\" content=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "chapterContent": [
+                {
+                    "value": "<meta property=\"og:novel:lastest_chapter_name\" content=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "updateTimeContent": [
+                {
+                    "value": "<meta property=\"og:novel:update_time\" content=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ]
+        },
+        "route8": {
+            "contentXML": true,
+            "image": "/html/body/div[2]/div[1]/div[1]/div[2]/div[1]/div/img",
+            "author": "/html/body/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]/span",
+            "summary": "/html/body/div[2]/div[1]/div[1]/div[2]/div[2]/div[4]/p",
+            "category": "/html/body/div[2]/div[1]/div[1]/div[2]/div[2]/div[2]/ul/li[1]/span",
+            "updateTime": "/html/body/div[2]/div[1]/div[1]/div[2]/div[2]/div[2]/ul/li[2]/span"
+        },
+        "route9": {
+            "contentXML": true,
+            "imageContent": [
+                {
+                    "value": "<meta property=\"og:image\" content=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "authorContent": [
+                {
+                    "value": "<meta property=\"og:novel:author\" content=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "summaryContent": [
+                {
+                    "value": "<meta property=\"og:description\" content=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "categoryContent": [
+                {
+                    "value": "<meta property=\"og:novel:category\" content=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "chapterContent": [
+                {
+                    "value": "<meta property=\"og:novel:lastest_chapter_name\" content=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "updateTimeContent": [
+                {
+                    "value": "<meta property=\"og:novel:update_time\" content=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ]
+        },
+        "route10": {
+            "contentXML": true,
+            "imageContent": [
+                {
+                    "value": "\"novel_info_main\">",
+                    "direction": 2
+                },
+                {
+                    "value": "img src=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "authorContent": [
+                {
+                    "value": "<meta property=\"og:novel:author\" content=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "summaryContent": [
+                {
+                    "value": "<meta property=\"og:description\" content=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "categoryContent": [
+                {
+                    "value": "<meta property=\"og:novel:category\" content=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "chapterContent": [
+                {
+                    "value": "<meta property=\"og:novel:lastest_chapter_name\" content=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "updateTimeContent": [
+                {
+                    "value": "<meta property=\"og:novel:update_time\" content=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
                     "direction": 1
                 }
             ]
@@ -1611,8 +2520,8 @@
             "summary": "//*[@id=\"bookSummary\"]/content",
             "chapter": "//*[@id=\"scroll\"]/div[1]/div/div[3]/a/div[2]/p/text()[2]",
             "category": "//*[@id=\"bookDetailWrapper\"]/div/div[1]/div[2]/p[3]/span",
-            "updateTime": "//*[@id=\"scroll\"]/div[1]/div/div[3]/a/div[2]/p/text()[1]",
-            "updateTimePrefix": "最新章節 : ",
+            "updateTime": "//*[@id=\"scroll\"]/div[1]/div/div[3]/a/div[1]/text()",
+            "updateTimePrefix": "更新時間 : ",
             "invalidCategorys": [
                 "tag-small"
             ],
@@ -1695,6 +2604,11 @@
             3,
             4,
             5,
+            6,
+            7,
+            8,
+            9,
+            10,
             101,
             102,
             1001
@@ -1745,8 +2659,11 @@
             ]
         },
         "route2": {
-            "apiPrefix": "https://www.69shuba.com/",
+            "apiInfix": "/book/",
+            "apiPrefix": "https://www.69shuba.pro/book/",
             "apiSuffix": "/",
+            "apiPrefix2": "https://",
+            "apiSuffix2": "/",
             "contentXML": false,
             "prefixs": [
                 "/txt/"
@@ -1771,7 +2688,7 @@
                     "direction": 2
                 },
                 {
-                    "value": "https://www.69shuba.com",
+                    "value": "https://www.69shuba.pro",
                     "direction": 2
                 },
                 {
@@ -1870,32 +2787,42 @@
             ]
         },
         "route5": {
-            "contentXML": true,
-            "suffixs": [
-                ".html"
+            "contentXML": false,
+            "contains": [
+                "/xiaoshuo/"
             ],
-            "content": [
+            "urlContent": [
                 {
-                    "value": "<section class=\"container booklist\">",
+                    "value": "property=\"og:novel:read_url\" content=\"",
                     "direction": 2
                 },
                 {
-                    "value": "<ul class=\"list-inline\">",
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "content": [
+                {
+                    "value": "<div id=\"readerlists\">",
+                    "direction": 2
+                },
+                {
+                    "value": "</ul>",
                     "direction": 1
                 },
                 {
-                    "value": "<li class=\"list-group-item",
+                    "value": "<li>",
                     "direction": 3
                 }
             ],
             "url": [
                 {
-                    "value": "\" title=\"",
-                    "direction": 1
+                    "value": "<a href=\"",
+                    "direction": 2
                 },
                 {
                     "value": "\"",
-                    "direction": 2
+                    "direction": 1
                 }
             ],
             "name": [
@@ -1909,6 +2836,285 @@
                 }
             ]
         },
+        "route6": {
+            "contentXML": false,
+            "contains": [
+                "/cj/"
+            ],
+            "replaceText": [
+                "&#039;",
+                "</li>",
+                "&gt;",
+                "&gt;",
+                ">>",
+                "<<"
+            ],
+            "pageContentInfix": "_",
+            "pageContentPrefix": "",
+            "pageContentSuffix": "/",
+            "pageContentRemoveLast": 1,
+            "pageContent": [
+                {
+                    "value": "span class=\"middle\">",
+                    "direction": 2
+                },
+                {
+                    "value": "</select>",
+                    "direction": 1
+                },
+                {
+                    "value": "<option value=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "/\"",
+                    "direction": 1
+                },
+                {
+                    "value": "_",
+                    "direction": 2
+                }
+            ],
+            "rawContent": [
+                {
+                    "value": "</a>\n<div class=\"listpage\">",
+                    "direction": 1
+                },
+                {
+                    "value": "</div>",
+                    "direction": 2
+                }
+            ],
+            "content": [
+                {
+                    "value": "</dd>",
+                    "direction": 3
+                }
+            ],
+            "url": [
+                {
+                    "value": "<a href=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "name": [
+                {
+                    "value": "<dd>",
+                    "direction": 2
+                },
+                {
+                    "value": "<",
+                    "direction": 1
+                }
+            ]
+        },
+        "route7": {
+            "contentXML": false,
+            "contains": [
+                "/uuread"
+            ],
+            "suffixs": [
+                ".html"
+            ],
+            "replaceText": [
+                "&#039;",
+                "</li>",
+                "&gt;",
+                "&gt;",
+                ">>",
+                "<<"
+            ],
+            "replacingURL": [
+                "uu"
+            ],
+            "urlPrefix": "/uuindex",
+            "urlSuffix": "/1.html",
+            "pageContentInfix": "",
+            "pageContentPrefix": "",
+            "pageContentSuffix": ".html",
+            "pageContentRemoveLast": 6,
+            "pageContent": [
+                {
+                    "value": "<option value=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "/\"",
+                    "direction": 1
+                },
+                {
+                    "value": "/",
+                    "direction": 2
+                },
+                {
+                    "value": ".",
+                    "direction": 1
+                }
+            ],
+            "rawContent": [
+                {
+                    "value": "chapterList\">",
+                    "direction": 2
+                },
+                {
+                    "value": "</ul>",
+                    "direction": 1
+                }
+            ],
+            "content": [
+                {
+                    "value": "<li>",
+                    "direction": 3
+                }
+            ],
+            "url": [
+                {
+                    "value": "<a href=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "name": [
+                {
+                    "value": "</a>",
+                    "direction": 1
+                },
+                {
+                    "value": "\">",
+                    "direction": 2
+                }
+            ]
+        },
+        "route8": {
+            "contentXML": true,
+            "contains": [
+                "/book/"
+            ],
+            "suffixs": [
+                ".html"
+            ],
+            "replaceText": [
+                "&#039;",
+                "</li>",
+                "&gt;",
+                "&gt;",
+                ">>",
+                "<<"
+            ],
+            "content": [
+                {
+                    "value": "chapterList\">",
+                    "direction": 2
+                },
+                {
+                    "value": "id=\"showhide\">",
+                    "direction": 1
+                },
+                {
+                    "value": "<li class=\"lazyrender\">",
+                    "direction": 3
+                }
+            ],
+            "url": [
+                {
+                    "value": "<a href=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "name": [
+                {
+                    "value": "</a>",
+                    "direction": 1
+                },
+                {
+                    "value": "\">",
+                    "direction": 2
+                }
+            ]
+        },
+        "route9": {
+            "contentXML": true,
+            "suffixs": [
+                ".html"
+            ],
+            "content": [
+                {
+                    "value": "id=\"newlist\">",
+                    "direction": 2
+                },
+                {
+                    "value": "<div class=\"clear\"/>",
+                    "direction": 1
+                },
+                {
+                    "value": "<a href=\"",
+                    "direction": 3
+                }
+            ],
+            "url": [
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "name": [
+                {
+                    "value": "</a>",
+                    "direction": 1
+                },
+                {
+                    "value": "\">",
+                    "direction": 2
+                }
+            ]
+        },
+        "route10": {
+            "contentXML": true,
+            "contains": [
+                "/novels/"
+            ],
+            "content": [
+                {
+                    "value": "<ul id=\"ul_all_chapters\">",
+                    "direction": 2
+                },
+                {
+                    "value": "gofooter",
+                    "direction": 1
+                },
+                {
+                    "value": "<a href=\"",
+                    "direction": 3
+                }
+            ],
+            "url": [
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "name": [
+                {
+                    "value": "</a>",
+                    "direction": 1
+                },
+                {
+                    "value": "\">",
+                    "direction": 2
+                }
+            ]
+        },
         "route101": {
             "apiPrefix": "https://tw.linovelib.com/novel/",
             "apiSuffix": "/catalog",
@@ -1919,12 +3125,17 @@
             "suffixs": [
                 ".html"
             ],
-            "sectionSuffixs": [
-                "</li>"
+            "nameContains": [
+                "lazyload\""
+            ],
+            "sectionContains": [
+                "chapter-bar chapter-li"
             ],
             "replaceText": [
                 "&#039;",
-                "</li>"
+                "</li>",
+                "<h3>",
+                "</h3>"
             ],
             "content": [
                 {
@@ -1932,7 +3143,7 @@
                     "direction": 2
                 },
                 {
-                    "value": "</div>",
+                    "value": "</ol>",
                     "direction": 1
                 },
                 {
@@ -1941,6 +3152,14 @@
                 }
             ],
             "url": [
+                {
+                    "value": "<div class=\"volume-cover\">",
+                    "direction": 1
+                },
+                {
+                    "value": "<h3 class=",
+                    "direction": 2
+                },
                 {
                     "value": "<a href=\"",
                     "direction": 2
@@ -1951,6 +3170,14 @@
                 }
             ],
             "name": [
+                {
+                    "value": "<h3 class=\"chapter-bar chapter-li\">",
+                    "direction": 2
+                },
+                {
+                    "value": "<div class=\"volume-cover\">",
+                    "direction": 1
+                },
                 {
                     "value": "<a href=\"",
                     "direction": 2
@@ -2105,6 +3332,12 @@
             "歡迎閱讀《》，由更新\n本文地址:\n歡迎閱讀。 ...": ""
         },
         "replaceText": [
+            "</span><br style=\"box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 24px;\">\n<span style=\"color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 24px;\">　　</span><br style=\"box-sizing: content-box; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 24px;\">\n<span style=\"color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 24px;\">",
+            "<div class=\"contentadv\"><script>loadAdv(7,3);</script><div class=\"mid-ad-wap\" style=\"margin: 20px 0 20px 0;max-height: 300px;\">\n<script async=\"\" src=\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5764181899384746\" data-checked-head=\"true\"></script>\n<ins class=\"adsbygoogle\" style=\"display: block;\" data-ad-client=\"ca-pub-5764181899384746\" data-ad-slot=\"9343137977\" data-ad-format=\"auto\" data-full-width-responsive=\"true\" data-adsbygoogle-status=\"done\"></ins>\n<script> </script>\n</div>\n</div>",
+            "<div class=\"contentadv\"><script>loadAdv(7,3);</script><center>\n<script async=\"\" src=\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5764181899384746\" data-checked-head=\"true\"></script>\n<ins class=\"adsbygoogle\" style=\"display: block;\" data-ad-client=\"ca-pub-5764181899384746\" data-ad-slot=\"2273609814\" data-ad-format=\"auto\" data-full-width-responsive=\"true\" data-adsbygoogle-status=\"done\"></ins>\n<script> </script>\n</center>\n</div>",
+            "<div class=\"cotetadv\"><script>loadAdv(7,3);</script></div>",
+            "<div class=\"contentadv\"><script>loadAdv(7,3);</script></div>",
+            "<span style=\"color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 24px;\">",
             "lbsp;",
             "1t;/p",
             "article",
@@ -2113,11 +3346,19 @@
             "?\n? ?",
             "? ???",
             "壹小說?",
-            "閱讀app",
             "有聲小說在線收聽",
-            "<div class=\"cotetadv\"><script>loadAdv(7,3);</script></div>",
-            "767e;5ea6;641c;7d22;3o1o;4e91;6765;96o1;3o11;;8bf4;7f51;7ad9;ffoc;8ba9;",
-            "4f6o;4f53;9a8c;66f4;65bo;67oo;65bo;67oo;of;8bf4;79d2;66f4;65bo;3oo2;"
+            "閱讀app",
+            "<table>",
+            "<tbody>",
+            "<span>",
+            "</h1>",
+            "<h1>",
+            "<tr>",
+            "<td>",
+            "<script>loadAdv(2, 0);</script>",
+            "<p>    \"  </p>\n<div>  ",
+            "                       ",
+            "767e;5ea6;641c;7d22;3o1o;4e91;6765;96o1;3o11;;8bf4;7f51;7ad9;ffoc;8ba9;"
         ],
         "ignoreContentDict": {
             "好書閱讀app": "最新章節內容。",
@@ -2172,7 +3413,28 @@
             "髮誓": "發誓",
             "蒼發": "蒼髮",
             "試捲": "試卷",
-            "髮下": "發下"
+            "髮下": "發下",
+            "發妻": "髮妻",
+            "髮炎": "發炎",
+            "石闆": "石板",
+            "死闆": "死板",
+            "經曆": "經歷",
+            "鐵闆": "鐵板",
+            "黑闆": "黑板",
+            "白闆": "白板",
+            "闆凳": "板凳",
+            "闆書": "板書",
+            "面闆": "面板",
+            "銅闆": "銅板",
+            "手寫闆": "手寫板",
+            "天花闆": "天花板",
+            "一闆一眼": "一板一眼",
+            "導緻": "導致",
+            "緻敬": "致敬",
+            "大緻": "大致",
+            "一緻": "一致",
+            "緻命": "致命",
+            "緻歉": "致歉"
         },
         "route1": {
             "chapterUrlSuffixs": [
@@ -2184,7 +3446,8 @@
             "prev": "//*[@id=\"prev\"]",
             "next": "//*[@id=\"next\"]",
             "replaceText": [
-                "[愛筆樓]"
+                "[愛筆樓]",
+                "????"
             ],
             "rawContent": "#contentbox",
             "chapterName": "#timu",
@@ -2310,6 +3573,10 @@
                 },
                 {
                     "value": "<p class=\"readcotent bbb font-normal\">",
+                    "direction": 2
+                },
+                {
+                    "value": "</script>\n\n            </div>\n",
                     "direction": 2
                 },
                 {
@@ -2450,27 +3717,256 @@
             ]
         },
         "route5": {
-            "chapterUrlSuffixs": [
-                ".html"
-            ],
             "chapterUrlContains": [
-                "/article/"
+                "/xiaoshuo/"
             ],
-            "urlContains": [
-                "article"
-            ],
-            "prev": "/html/body/footer/div/a[2]",
-            "next": "/html/body/footer/div/a[4]",
-            "rawContent": "/html/body/section[3]/div/div[2]/article",
-            "chapterName": "/html/body/section[3]/div/div[2]/h1",
+            "prev": "/html/body/div[2]/div[3]/a[1]",
+            "next": "/html/body/div[2]/div[3]/a[4]",
+            "rawContent": "/html/body/div[2]/div[2]/div[3]",
+            "chapterName": "/html/body/div[2]/div[2]/div[1]/h1",
             "content": [
                 {
-                    "value": "<article class=\"content\">",
+                    "value": "<div id=\"content\">",
                     "direction": 2
                 },
                 {
-                    "value": "</article>",
+                    "value": "</div>",
                     "direction": 1
+                }
+            ],
+            "prevURLContent": [
+                {
+                    "value": "\">上一章",
+                    "direction": 1
+                },
+                {
+                    "value": "href=\"",
+                    "direction": 2
+                }
+            ],
+            "nextURLContent": [
+                {
+                    "value": "\">下一章",
+                    "direction": 1
+                },
+                {
+                    "value": "href=\"",
+                    "direction": 2
+                }
+            ]
+        },
+        "route6": {
+            "chapterUrlContains": [
+                "/cj/"
+            ],
+            "chapterUrlSuffixs": [
+                ".html"
+            ],
+            "prev": "/html/body/div[2]/div[5]/a[1]",
+            "next": "/html/body/div[2]/div[5]/a[4]",
+            "rawContent": "/html/body/div[2]/div[4]",
+            "chapterName": "/html/body/div[2]/h1",
+            "content": [
+                {
+                    "value": "<div id=\"chaptercontent\">",
+                    "direction": 2
+                },
+                {
+                    "value": "</div>",
+                    "direction": 1
+                }
+            ]
+        },
+        "route7": {
+            "itemsForRemoveFirstPrefix": [
+                "<div><script"
+            ],
+            "itemsForRemoveFirstSuffix": [
+                "</script>"
+            ],
+            "chapterUrlContains": [
+                "/uuread"
+            ],
+            "chapterUrlSuffixs": [
+                ".html"
+            ],
+            "prev": "/html/body/div[2]/p/a[1]",
+            "next": "/html/body/div[2]/p/a[4]",
+            "rawContent": "/html/body/div[2]/div[3]/div",
+            "chapterName": "/html/body/div[2]/div[3]/h1",
+            "content": [
+                {
+                    "value": "\"read-content\">",
+                    "direction": 2
+                }
+            ]
+        },
+        "route8": {
+            "adPrefix": "<div style=\"margin: ",
+            "adSuffix": "</script>",
+            "chapterUrlSuffixs": [
+                ".html"
+            ],
+            "rawContentItems": [
+                {
+                    "value": "class=\"read-content\">",
+                    "direction": 2
+                },
+                {
+                    "value": "<p class=\"mlfy_page\">",
+                    "direction": 1
+                }
+            ],
+            "rawChapterNameItems": [
+                {
+                    "value": "<div id=\"mlfy_main_text\">",
+                    "direction": 2
+                },
+                {
+                    "value": "</h1>",
+                    "direction": 1
+                },
+                {
+                    "value": ">",
+                    "direction": 2
+                }
+            ],
+            "content": [
+                {
+                    "value": "</p>\n</div",
+                    "direction": 1
+                }
+            ],
+            "prevURLContent": [
+                {
+                    "value": "<div class=\"toolbar\">",
+                    "direction": 1
+                },
+                {
+                    "value": "prevChapterTop\" href=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "nextURLContent": [
+                {
+                    "value": "<div class=\"toolbar\">",
+                    "direction": 1
+                },
+                {
+                    "value": "href=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ]
+        },
+        "route9": {
+            "itemsForRemoveFirstPrefix": [
+                "<div><script"
+            ],
+            "itemsForRemoveFirstSuffix": [
+                "</script>"
+            ],
+            "chapterUrlPrefixs": [
+                "/"
+            ],
+            "chapterUrlSuffixs": [
+                ".html"
+            ],
+            "rawContent": "/html/body/div[1]/div[1]/div[3]/div",
+            "chapterName": "/html/body/div[1]/div[1]/div[2]/h1",
+            "content": [
+                {
+                    "value": "booktxt\">",
+                    "direction": 2
+                }
+            ],
+            "prevURLContent": [
+                {
+                    "value": "linkPrev\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\">",
+                    "direction": 1
+                },
+                {
+                    "value": "\"",
+                    "direction": 2
+                }
+            ],
+            "nextURLContent": [
+                {
+                    "value": "linkNext\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\">",
+                    "direction": 1
+                },
+                {
+                    "value": "\"",
+                    "direction": 2
+                }
+            ]
+        },
+        "route10": {
+            "dropFirstCount": 3,
+            "dropLastCount": 3,
+            "contentValue": "adsbygoogle",
+            "itemsForRemoveFirstPrefix": [
+                "<div id="
+            ],
+            "itemsForRemoveFirstSuffix": [
+                "</script>"
+            ],
+            "chapterUrlContains": [
+                "/novels/"
+            ],
+            "rawContent": "/html/body/div[2]/main/section/article",
+            "chapterName": "/html/body/div[2]/main/section/div[2]/p",
+            "rawContentReplaceText": [
+                " || []).push({});-->\n<!--</script>-->",
+                "<!--    <ins class=\""
+            ],
+            "content": [
+                {
+                    "value": "<article id=\"article\"",
+                    "direction": 2
+                }
+            ],
+            "prevURLContent": [
+                {
+                    "value": "prev_url\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\">",
+                    "direction": 1
+                },
+                {
+                    "value": "\"",
+                    "direction": 2
+                }
+            ],
+            "nextURLContent": [
+                {
+                    "value": "next_url\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\">",
+                    "direction": 1
+                },
+                {
+                    "value": "\"",
+                    "direction": 2
                 }
             ]
         },
@@ -2518,8 +4014,15 @@
                     "direction": 1
                 }
             ],
-            "rawContent": "//*[@id=\"acontent\"]",
-            "chapterName": "/html/body/div[1]/div[2]/div/div[1]/h3",
+            "cookie": {
+                "domain": "tw.linovelib.com",
+                "path": "/",
+                "name": "night",
+                "value": "1",
+                "secure": "False"
+            },
+            "rawContent": "//*[@id=\"acontent1\"]",
+            "chapterName": "/html/body/div[1]/div[1]/div/div[1]/h1",
             "chapterName2": "/html/body/div[1]/div[2]/div/div[1]/h1",
             "content": [
                 {
@@ -2572,6 +4075,12 @@
                     ".jpg",
                     ".jpeg",
                     ".png"
+                ],
+                "illustrationContains": [
+                    "插畫：",
+                    "圖源：",
+                    "譯者：",
+                    "掃圖："
                 ],
                 "content": [
                     {
@@ -2686,11 +4195,11 @@
             ]
         }
     },
-    "version": "4.3.1",
+    "version": "4.5.0",
     "watchCount": 50,
     "txtChunkSize": 10000,
-    "expirationDate2": 30,
-    "expirationDate3": 7,
+    "expirationDate2": 7,
+    "expirationDate3": 30,
     "reportTextCountLimit": 4000,
     "hasRestricted": false,
     "allowedPurchase": false,
@@ -2708,7 +4217,10 @@
         "LODENBW"
     ],
     "redeemCodes": [
-        "fesmealdefofkowpkfopwfoewgewjgw3fewofkeowfj"
+        "fesmealdefofkowpkfop709a26f5dff905d6f9eb0331e676acb8dcb185a0883db0940830551a1ada4deawfoewgewjgw3fewofkeowfj"
+    ],
+    "redeemCodesLevel2": [
+        "vcnjibo"
     ],
     "temporaryCodes": [
         "juhaxaw",
@@ -2719,30 +4231,30 @@
         "pobfylv",
         "mdugkzi",
         "nrtwxyh",
-        "sketpqd",
-        "vcnjibo"
+        "sketpqd"
     ],
-    "invalidRoutes": [],
+    "invalidRoutes": [
+        1
+    ],
     "route1": "https://tw.uukanshu.com",
-    "route2": "https://www.69shuba.com",
+    "route1_1": "https://tw.uukanshu.net",
+    "route2": "https://www.69shuba.pro",
+    "route2_1": "https://www.69shu.cx",
     "route3": "https://uukanshu.cc",
-    "route3_1": "https://www.uukanshu.com",
+    "route3_1": "https://www.uukanshu.net",
     "route4": "https://www.ttkan.co",
     "route4_1": "https://www.bg3.co",
-    "route5": "https://m.dongshansuiwan.com",
+    "route5": "https://www.wfxs.tw",
+    "route6": "https://wap.jimoao.com",
+    "route7": "https://www.uukanshu.info",
+    "route8": "https://www.uuks5.com",
+    "route9": "https://www.piaotianba.com",
+    "route10": "https://www.novels.com.tw",
     "route101": "https://tw.linovelib.com",
     "route102": "https://m.shencou.com",
     "route1001": "https://czbooks.net",
-    "route3_1Domain": "www.uukanshu.com",
+    "route3_1Domain": "www.uukanshu.net",
     "route4_Content": "https://www.bg3.co",
-    "route_key1": "|1∆∆∆|",
-    "route_key2": "|2∆∆∆|",
-    "route_key3": "|3∆∆∆|",
-    "route_key4": "|4∆∆∆|",
-    "route_key5": "|∆∆∆|",
-    "route_key101": "|101∆∆∆|",
-    "route_key102": "|102∆∆∆|",
-    "route_key1001": "|1001∆∆∆|",
     "route1001Prefix": "https:",
     "route1001ChapterKey": "chapterNumber=",
     "validChapterURL": [
@@ -2762,13 +4274,14 @@
     "txtConditions": [
         "☆、第",
         "\n\n第",
-        "\n第"
+        "\n第",
+        "\n\n"
     ],
     "txtChapterKey": "_____",
     "disclaimer": "1、%@所有內容均來自其他網站，本APP不參與組織掃圖、翻譯、錄入等工作。\n\n2、本APP僅為學術交流者及寫作愛好者提供試閱，如果你喜歡該作品，請聯繫相關出版機構購買正版。\n\n3、由於我們無法對所有作品的內容進行充分的監測，我們制定了旨在保護知識產權權利人合法權益的措施和步驟，當著作權人和/或依法可以行使信息網絡傳播權的權利人（以下簡稱「權利人」）發現本APP上的內容侵犯其信息網絡傳播權時，權利人應事先向本APP發出權利通知，本APP將根據相關法律規定採取措施刪除/隱藏相關內容。\n\n如有問題請聯繫我們: ",
     "list": {
         "problemURLs": [
-            "https://www.69shuba.com/ajax_top/7/1.htm"
+            "https://www.69shuba.pro/ajax_top/7/1.htm"
         ],
         "route1": {
             "itemFrom": 1,
@@ -3106,47 +4619,66 @@
             ]
         },
         "route5": {
-            "itemCount": 31,
+            "itemCount": 20,
+            "contains": [
+                "/xiaoshuo/"
+            ],
             "content": [
                 {
-                    "value": "<section class=\"container top\">",
+                    "value": "<div class=\"shulist\">",
                     "direction": 2
                 },
                 {
-                    "value": "<ul class=\"pagination\">",
+                    "value": "class=\"pages\">",
                     "direction": 1
                 },
                 {
-                    "value": "<tr>",
+                    "value": "<li class=\"three\">",
                     "direction": 3
                 }
             ],
+            "pathSuffix": "/",
             "pathContent": [
                 {
                     "value": ".html",
                     "direction": 1
                 }
             ],
-            "suffixs": [
-                ".html"
-            ],
-            "contains": [
-                "/article/"
-            ],
-            "pagesXPath": "/html/body/section[3]/div/div[1]/ul/li[1]/a",
-            "pathPrefix": "/",
-            "pathSuffix": ".html",
             "urlContent": [
                 {
-                    "value": "\" title=\"",
+                    "value": "\" target=\"_blank\">",
                     "direction": 1
                 },
                 {
-                    "value": "href=\"",
+                    "value": "<a href=\"",
                     "direction": 2
                 }
             ],
             "nameContent": [
+                {
+                    "value": "target=\"_blank\">",
+                    "direction": 2
+                },
+                {
+                    "value": "</a>",
+                    "direction": 1
+                }
+            ],
+            "authorContent": [
+                {
+                    "value": "<li class=\"four\">",
+                    "direction": 2
+                },
+                {
+                    "value": "</li>",
+                    "direction": 1
+                }
+            ],
+            "chapterContent": [
+                {
+                    "value": "title=\"",
+                    "direction": 2
+                },
                 {
                     "value": "</a>",
                     "direction": 1
@@ -3156,37 +4688,459 @@
                     "direction": 2
                 }
             ],
-            "authorContent": [
+            "introductionContent": [
                 {
-                    "value": "<td class=\"col-md-2 col-sm-4 col-xs-4\">",
+                    "value": "<li class=\"six\">",
                     "direction": 2
                 },
                 {
-                    "value": "</td>",
+                    "value": "</li>",
+                    "direction": 1
+                }
+            ]
+        },
+        "route6": {
+            "itemCount": 15,
+            "contains": [
+                "/cj/"
+            ],
+            "content": [
+                {
+                    "value": "<div id=\"hotcontent\">",
+                    "direction": 2
+                },
+                {
+                    "value": "<ul class=\"pagination\"",
+                    "direction": 1
+                },
+                {
+                    "value": "<div class=\"item\">",
+                    "direction": 3
+                }
+            ],
+            "pathPrefix": "/",
+            "pathSuffix": ".html",
+            "pathContent": [
+                {
+                    "value": ".html",
                     "direction": 1
                 }
             ],
-            "categoryContent": [
+            "urlContent": [
                 {
-                    "value": "<td class=\"col-md-2 col-sm-2 hidden-xs\">",
+                    "value": "<dt><a href=\"",
                     "direction": 2
                 },
                 {
-                    "value": "</td>",
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "nameContent": [
+                {
+                    "value": "title=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "authorContent": [
+                {
+                    "value": "<div class=\"btm\">",
+                    "direction": 2
+                },
+                {
+                    "value": "<",
+                    "direction": 1
+                }
+            ],
+            "chapterContent": [
+                {
+                    "value": "<em class=\"orange visible-xs\">",
+                    "direction": 2
+                },
+                {
+                    "value": "</em>",
                     "direction": 1
                 }
             ],
             "introductionContent": [
                 {
-                    "value": "\" title=\"",
+                    "value": "</a></dt>",
                     "direction": 2
                 },
                 {
-                    "value": "</td>",
+                    "value": "<dd>",
+                    "direction": 2
+                },
+                {
+                    "value": "</dd>",
+                    "direction": 1
+                }
+            ]
+        },
+        "route7": {
+            "itemCount": 16,
+            "contains": [
+                "info/"
+            ],
+            "content": [
+                {
+                    "value": "<div id=\"sitebox\">",
+                    "direction": 2
+                },
+                {
+                    "value": "<div class=\"pages\">",
                     "direction": 1
                 },
                 {
-                    "value": "\">",
+                    "value": "<dt><a href=\"",
+                    "direction": 3
+                }
+            ],
+            "pathPrefix": "/",
+            "pathSuffix": ".html",
+            "pathReplaceText": [
+                "/1"
+            ],
+            "pathContent": [
+                {
+                    "value": "/1.html",
+                    "direction": 1
+                },
+                {
+                    "value": ".html",
+                    "direction": 1
+                }
+            ],
+            "urlContent": [
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "nameContent": [
+                {
+                    "value": "alt=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "imageContent": [
+                {
+                    "value": "data-original=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "authorContent": [
+                {
+                    "value": "<span class=\"uptime\">",
+                    "direction": 2
+                },
+                {
+                    "value": "<",
+                    "direction": 1
+                }
+            ],
+            "chapterContent": [
+                {
+                    "value": "class=\"book_other\">",
+                    "direction": 2
+                },
+                {
+                    "value": "</a>",
+                    "direction": 1
+                },
+                {
+                    "value": ">",
+                    "direction": 2
+                }
+            ],
+            "introductionContent": [
+                {
+                    "value": "class=\"book_des\">",
+                    "direction": 2
+                },
+                {
+                    "value": "<",
+                    "direction": 1
+                }
+            ]
+        },
+        "route8": {
+            "needsPageIndex": false,
+            "nameReplaceText": [
+                "全文"
+            ],
+            "introductionReplaceText": [
+                "div ss=\"intro\"",
+                "{intro}"
+            ],
+            "contains": [
+                "/book/"
+            ],
+            "content": [
+                {
+                    "value": "<div id=\"sitebox\">",
+                    "direction": 2
+                },
+                {
+                    "value": "<div id=\"footer\">",
+                    "direction": 1
+                },
+                {
+                    "value": "<dt><a href=\"",
+                    "direction": 3
+                }
+            ],
+            "urlContent": [
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "nameContent": [
+                {
+                    "value": "alt=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "imageContent": [
+                {
+                    "value": "data-src=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "authorContent": [
+                {
+                    "value": "状态：",
+                    "direction": 2
+                },
+                {
+                    "value": "<",
+                    "direction": 1
+                }
+            ],
+            "chapterContent": [
+                {
+                    "value": "class=\"book_other\">",
+                    "direction": 2
+                },
+                {
+                    "value": "</a>",
+                    "direction": 1
+                },
+                {
+                    "value": ">",
+                    "direction": 2
+                }
+            ],
+            "introductionContent": [
+                {
+                    "value": "class=\"book_des\">",
+                    "direction": 2
+                },
+                {
+                    "value": "<",
+                    "direction": 1
+                }
+            ]
+        },
+        "route9": {
+            "itemCount": 14,
+            "prefixs": [
+                "https://"
+            ],
+            "contains": [
+                ".com/"
+            ],
+            "content": [
+                {
+                    "value": "<table class=\"table\">",
+                    "direction": 2
+                },
+                {
+                    "value": "</table>",
+                    "direction": 1
+                },
+                {
+                    "value": "<a href=\"",
+                    "direction": 3
+                }
+            ],
+            "pathPrefix": "/",
+            "pathSuffix": ".html",
+            "pathReplaceText": [
+                "/1"
+            ],
+            "pathContent": [
+                {
+                    "value": "/1.html",
+                    "direction": 1
+                },
+                {
+                    "value": ".html",
+                    "direction": 1
+                }
+            ],
+            "urlContent": [
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "nameContent": [
+                {
+                    "value": "title=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "authorContent": [
+                {
+                    "value": "<td class=\"fs-12 text-muted\">",
+                    "direction": 2
+                },
+                {
+                    "value": "<",
+                    "direction": 1
+                }
+            ],
+            "chapterContent": [
+                {
+                    "value": "<a class=\"text-muted\"",
+                    "direction": 2
+                },
+                {
+                    "value": "</a>",
+                    "direction": 1
+                },
+                {
+                    "value": ">",
+                    "direction": 2
+                }
+            ],
+            "introductionContent": [
+                {
+                    "value": "<td class=\"fs-12\">",
+                    "direction": 1
+                },
+                {
+                    "value": "<td class=\"fs-12 hidden-xs\">",
+                    "direction": 2
+                },
+                {
+                    "value": "<",
+                    "direction": 1
+                }
+            ]
+        },
+        "route10": {
+            "allItem": "/nosort/",
+            "itemCount": 10,
+            "contains": [
+                "/novels/"
+            ],
+            "content": [
+                {
+                    "value": "class=\"flex\">",
+                    "direction": 2
+                },
+                {
+                    "value": "<div class=\"pages",
+                    "direction": 1
+                },
+                {
+                    "value": "img_span",
+                    "direction": 3
+                }
+            ],
+            "pathSuffix": "/",
+            "urlContent": [
+                {
+                    "value": "\"><img",
+                    "direction": 1
+                },
+                {
+                    "value": "\"",
+                    "direction": 2
+                }
+            ],
+            "nameContent": [
+                {
+                    "value": "title=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "imageContent": [
+                {
+                    "value": "data-original=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "authorContent": [
+                {
+                    "value": "circle-o\">",
+                    "direction": 2
+                },
+                {
+                    "value": "<",
+                    "direction": 1
+                }
+            ],
+            "categoryContent": [
+                {
+                    "value": "<em class=\"orange\">",
+                    "direction": 2
+                },
+                {
+                    "value": "<",
+                    "direction": 1
+                },
+                {
+                    "value": ">",
+                    "direction": 2
+                }
+            ],
+            "introductionContent": [
+                {
+                    "value": "<p class=\"indent\">",
+                    "direction": 2
+                },
+                {
+                    "value": "<",
+                    "direction": 1
+                },
+                {
+                    "value": "<",
                     "direction": 1
                 }
             ]
@@ -3530,11 +5484,11 @@
         "route2": {
             "httpRequest": "POST",
             "dropFirstCount": 1,
-            "api": "https://www.69shuba.com/modules/article/search.php",
+            "api": "https://www.69shuba.pro/modules/article/search.php",
             "apiSuffix": "&searchtype=all",
             "headers": {
-                "Host": "www.69shuba.com",
-                "Referer": "www.69shuba.com/",
+                "Host": "www.69shuba.pro",
+                "Referer": "www.69shuba.pro/",
                 "Content-Type": "application/x-www-form-urlencoded"
             },
             "xpath": "/html/body/div[3]/ul/li[1]/div",
@@ -3543,6 +5497,10 @@
             "contains": [
                 "/txt/",
                 "/book/"
+            ],
+            "nameValue": "<span class=\"hottext\">",
+            "nameReplaceText": [
+                "</span>"
             ],
             "categoryValue": "</label>\n                                            <label>",
             "categoryReplaceText": [
@@ -3605,8 +5563,20 @@
                     "direction": 2
                 },
                 {
+                    "value": "\"><span class=\"hottext\">",
+                    "direction": 2
+                },
+                {
                     "value": "</span></a></h3>",
                     "direction": 1
+                },
+                {
+                    "value": "</a></h3>",
+                    "direction": 1
+                },
+                {
+                    "value": ".htm\">",
+                    "direction": 2
                 },
                 {
                     "value": "\">",
@@ -3944,37 +5914,70 @@
             ]
         },
         "route5": {
-            "api": "https://m.dongshansuiwan.com/search.php",
-            "xpath": "/html/body/div[4]/div[1]/span",
-            "searchKey": "search",
+            "api": "https://www.wfxs.tw/s.html",
+            "searchKey": "s",
             "contains": [
-                "/article/"
+                "/xiaoshuo/"
             ],
             "content": [
                 {
-                    "value": "<section class=\"container top\">",
+                    "value": "<div id=\"sitembox\">",
                     "direction": 2
                 },
                 {
-                    "value": "<ul class=\"pagination\">",
+                    "value": " <div class=\"bookList\">",
                     "direction": 1
                 },
                 {
-                    "value": "<tr>",
+                    "value": "<dt><a href=\"",
                     "direction": 3
                 }
             ],
             "urlContent": [
                 {
-                    "value": "\" title=\"",
+                    "value": "\">",
                     "direction": 1
-                },
-                {
-                    "value": "href=\"",
-                    "direction": 2
                 }
             ],
             "nameContent": [
+                {
+                    "value": "alt=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "imageContent": [
+                {
+                    "value": "<img class=\"lazyload\" _src=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "authorContent": [
+                {
+                    "value": "<dd class=\"book_des\">",
+                    "direction": 1
+                },
+                {
+                    "value": "</span>",
+                    "direction": 1
+                },
+                {
+                    "value": "<span>",
+                    "direction": 2
+                }
+            ],
+            "chapterContent": [
+                {
+                    "value": "<dd class=\"book_other\">",
+                    "direction": 2
+                },
                 {
                     "value": "</a>",
                     "direction": 1
@@ -3984,23 +5987,92 @@
                     "direction": 2
                 }
             ],
-            "authorContent": [
+            "introductionContent": [
                 {
-                    "value": "</a></td>",
+                    "value": "<dd class=\"book_des\">",
                     "direction": 2
                 },
                 {
-                    "value": "</td>",
+                    "value": "</dd>",
+                    "direction": 1
+                }
+            ]
+        },
+        "route7": {
+            "api": "https://www.uukanshu.info/search",
+            "headers": {
+                "Referer": "https://www.uukanshu.info/search",
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            "xpath": "/",
+            "contains": [
+                "info/"
+            ],
+            "content": [
+                {
+                    "value": "<div id=\"sitebox\">",
+                    "direction": 2
+                },
+                {
+                    "value": "<div id=\"footer\"",
                     "direction": 1
                 },
                 {
-                    "value": "\">",
+                    "value": "<dt><a href=\"",
+                    "direction": 3
+                }
+            ],
+            "urlContent": [
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "nameContent": [
+                {
+                    "value": "alt=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "imageContent": [
+                {
+                    "value": "data-original=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "authorContent": [
+                {
+                    "value": "class=\"book_des\">",
+                    "direction": 1
+                },
+                {
+                    "value": "class=\"book_other\">",
+                    "direction": 2
+                },
+                {
+                    "value": "</span>",
+                    "direction": 1
+                },
+                {
+                    "value": "<span>",
                     "direction": 2
                 }
             ],
             "chapterContent": [
                 {
-                    "value": "</td></tr>",
+                    "value": "class=\"book_other\">",
+                    "direction": 2
+                },
+                {
+                    "value": "</a>",
                     "direction": 1
                 },
                 {
@@ -4010,16 +6082,94 @@
             ],
             "introductionContent": [
                 {
-                    "value": "\" title=\"",
+                    "value": "class=\"book_des\">",
                     "direction": 2
                 },
                 {
-                    "value": "\">",
+                    "value": "<",
                     "direction": 1
                 }
             ]
         },
+        "route9": {
+            "api": "https://www.piaotianba.com/search",
+            "prefixs": [
+                "https://"
+            ],
+            "contains": [
+                ".com/"
+            ],
+            "content": [
+                {
+                    "value": "<div class=\"container body-content\">",
+                    "direction": 2
+                },
+                {
+                    "value": "<footer",
+                    "direction": 1
+                },
+                {
+                    "value": "book-coverlist",
+                    "direction": 3
+                }
+            ],
+            "urlContent": [
+                {
+                    "value": "<a href=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "nameContent": [
+                {
+                    "value": "title=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
+            "imageContent": [
+                {
+                    "value": "url(",
+                    "direction": 2
+                },
+                {
+                    "value": ")\"",
+                    "direction": 1
+                }
+            ],
+            "authorContent": [
+                {
+                    "value": "</small>",
+                    "direction": 1
+                },
+                {
+                    "value": ">",
+                    "direction": 2
+                }
+            ],
+            "introductionContent": [
+                {
+                    "value": "</small>",
+                    "direction": 2
+                },
+                {
+                    "value": "</p>",
+                    "direction": 1
+                },
+                {
+                    "value": ">",
+                    "direction": 2
+                }
+            ]
+        },
         "route101": {
+            "slashCount": 3,
             "apiPrefix": "https://cse.google.com",
             "contains": [
                 "/novel/"
