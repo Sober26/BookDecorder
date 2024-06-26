@@ -4206,7 +4206,6 @@
     "speechTextSpacing": false,
     "needsResetWatchCount": true,
     "checkLatestTransaction": false,
-    "debugCode": "EnableDebugMode",
     "ss1OO": [
         "我要色色",
         "lsp"
@@ -4215,23 +4214,6 @@
         "l_n",
         "L_N",
         "LODENBW"
-    ],
-    "redeemCodes": [
-        "fesmealdefofkowpkfop709a26f5dff905d6f9eb0331e676acb8dcb185a0883db0940830551a1ada4deawfoewgewjgw3fewofkeowfj"
-    ],
-    "redeemCodesLevel2": [
-        "vcnjibo"
-    ],
-    "temporaryCodes": [
-        "juhaxaw",
-        "gryqosm",
-        "cxzlvog",
-        "qweahpm",
-        "rfdzkqc",
-        "pobfylv",
-        "mdugkzi",
-        "nrtwxyh",
-        "sketpqd"
     ],
     "invalidRoutes": [
         1
@@ -4260,9 +4242,6 @@
     "validChapterURL": [
         "/n/",
         "cid="
-    ],
-    "migratedURLs": [
-        "www.69shu.com"
     ],
     "discordGroupLink": "https://discord.gg/sMW6gTQhFN",
     "forbiddenTextA": [
