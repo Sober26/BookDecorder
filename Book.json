@@ -250,10 +250,10 @@
             "title1": "熱門小說推薦",
             "title2": "最近更新",
             "category": {
-                "api": "https://www.69shuba.pro",
-                "xpath": "/html/body/div[3]/ul/li/div/div[4]/ul",
+                "api": "https://69shuba.cx/blist/class/0.htm",
+                "xpath": "/html/body/div[3]/div/div/ul",
                 "contains": [
-                    "newtag"
+                    "/blist"
                 ],
                 "replaceText": [
                     "novels/class",
@@ -286,7 +286,7 @@
                 ]
             },
             "recommend": {
-                "api": "https://www.69shuba.pro/novels/male",
+                "api": "https://69shuba.cx/blist/male",
                 "xpath": "/html/body/div[3]/div/ul/li/div/div/ul",
                 "suffixs": [
                     "htm"
@@ -299,12 +299,16 @@
                 ],
                 "url": [
                     {
-                        "value": "\" class=\"imgbox\">",
+                        "value": "</a></h3>",
                         "direction": 1
                     },
                     {
-                        "value": "https://www.69shuba.pro",
+                        "value": "href=\"",
                         "direction": 2
+                    },
+                    {
+                        "value": "\"",
+                        "direction": 1
                     }
                 ],
                 "name": [
@@ -329,7 +333,7 @@
                 ]
             },
             "hotRecommend": {
-                "api": "https://www.69shuba.pro/novels/female",
+                "api": "https://69shuba.cx/blist/female",
                 "xpath": "/html/body/div[3]/div/ul/li/div/div/ul",
                 "suffixs": [
                     "htm"
@@ -342,12 +346,16 @@
                 ],
                 "url": [
                     {
-                        "value": "\" class=\"imgbox\">",
+                        "value": "</a></h3>",
                         "direction": 1
                     },
                     {
-                        "value": "https://www.69shuba.pro",
+                        "value": "href=\"",
                         "direction": 2
+                    },
+                    {
+                        "value": "\"",
+                        "direction": 1
                     }
                 ],
                 "name": [
@@ -950,7 +958,7 @@
                 ],
                 "content": [
                     {
-                        "value": "<li>\n<span class=\"s1\">",
+                        "value": "<span class=\"s1\">",
                         "direction": 3
                     }
                 ],
@@ -2063,7 +2071,7 @@
             ],
             "imageContent": [
                 {
-                    "value": "<div class=\"bookimg",
+                    "value": "<div class=\"bookbox\">",
                     "direction": 2
                 },
                 {
@@ -2080,13 +2088,18 @@
                 }
             ],
             "authorContent": [
+
                 {
-                    "value": "作者",
+                    "value": "<p>作者",
                     "direction": 2
                 },
                 {
-                    "value": "\" target",
+                    "value": "</a>",
                     "direction": 1
+                },
+                {
+                    "value": ">",
+                    "direction": 2
                 },
                 {
                     "value": "\"",
@@ -2095,11 +2108,19 @@
             ],
             "summaryContent": [
                 {
-                    "value": "<div class=\"navtxt\">",
+                    "value": "infolastcontent",
                     "direction": 2
                 },
                 {
-                    "value": "</p>",
+                    "value": "lastcontentfooter",
+                    "direction": 1
+                },
+                {
+                    "value": "class=\"lastcontent\">",
+                    "direction": 2
+                },
+                {
+                    "value": "</div>",
                     "direction": 1
                 }
             ],
@@ -2600,7 +2621,6 @@
     },
     "chapters": {
         "reversed": [
-            2,
             3,
             4,
             5,
@@ -2660,7 +2680,7 @@
         },
         "route2": {
             "apiInfix": "/book/",
-            "apiPrefix": "https://www.69shuba.pro/book/",
+            "apiPrefix": "https://www.69shuba.cx/book/",
             "apiSuffix": "/",
             "apiPrefix2": "https://",
             "apiSuffix2": "/",
@@ -2688,7 +2708,7 @@
                     "direction": 2
                 },
                 {
-                    "value": "https://www.69shuba.pro",
+                    "value": "https://www.69shuba.cx",
                     "direction": 2
                 },
                 {
@@ -2727,7 +2747,7 @@
             ],
             "url": [
                 {
-                    "value": "</a>\n</dd>",
+                    "value": "</a>",
                     "direction": 1
                 },
                 {
@@ -2737,7 +2757,7 @@
             ],
             "name": [
                 {
-                    "value": "</a>\n</dd>",
+                    "value": "</a>",
                     "direction": 1
                 },
                 {
@@ -2875,9 +2895,27 @@
                     "direction": 2
                 }
             ],
+            "firstRawContent": [
+                {
+                    "value": "                                       <a class=\"onclick\"",
+                    "direction": 2
+                },
+                {
+                    "value": "<div class=\"listpage\">",
+                    "direction": 1
+                },
+                {
+                    "value": "</div>",
+                    "direction": 2
+                }
+            ],
             "rawContent": [
                 {
-                    "value": "</a>\n<div class=\"listpage\">",
+                    "value": "<span class=\"right\">\r\n                                           <a class=\"before\"",
+                    "direction": 2
+                },
+                {
+                    "value": "<div class=\"listpage\">",
                     "direction": 1
                 },
                 {
@@ -3337,6 +3375,8 @@
             "<div class=\"contentadv\"><script>loadAdv(7,3);</script><center>\n<script async=\"\" src=\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5764181899384746\" data-checked-head=\"true\"></script>\n<ins class=\"adsbygoogle\" style=\"display: block;\" data-ad-client=\"ca-pub-5764181899384746\" data-ad-slot=\"2273609814\" data-ad-format=\"auto\" data-full-width-responsive=\"true\" data-adsbygoogle-status=\"done\"></ins>\n<script> </script>\n</center>\n</div>",
             "<div class=\"cotetadv\"><script>loadAdv(7,3);</script></div>",
             "<div class=\"contentadv\"><script>loadAdv(7,3);</script></div>",
+            "<div class=\"cotetadv\"><script>loadAdv(8,1);</script></div>",
+            "<div class=\"contentadv\"><script>loadAdv(8,2);</script></div>",
             "<span style=\"color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 24px;\">",
             "lbsp;",
             "1t;/p",
@@ -3426,6 +3466,7 @@
             "闆書": "板書",
             "面闆": "面板",
             "銅闆": "銅板",
+            "刻闆": "刻板",
             "手寫闆": "手寫板",
             "天花闆": "天花板",
             "一闆一眼": "一板一眼",
@@ -3434,7 +3475,12 @@
             "大緻": "大致",
             "一緻": "一致",
             "緻命": "致命",
-            "緻歉": "致歉"
+            "緻歉": "致歉",
+            "佔蔔": "占卜",
+            "宕機": "當機",
+            "蔔掛": "卜掛",
+            "別西蔔": "別西卜",
+            "未蔔先知": "未卜先知"
         },
         "route1": {
             "chapterUrlSuffixs": [
@@ -3604,9 +3650,11 @@
             ],
             "prev": "//*[@id=\"linkPrev\"]",
             "next": "//*[@id=\"linkNext\"]",
-            "rawContent": "/html/body/div[2]/div[1]/div/p[2]",
-            "chapterName": "/html/body/div[2]/div[1]/div/h1",
+            "rawContent": "/html/body/div[2]/div[1]/div/div[2]",
+            "chapterName": "/html/body/div[2]/div/div/h1",
             "rawContentReplaceText": [
+                "<script>loadAdv(5,0);</script>",
+                "<div class=\"readcotent bbb",
                 "<p class=\"readcotent bbb font-normal\">",
                 "bbb",
                 "<p class",
@@ -3722,8 +3770,8 @@
             ],
             "prev": "/html/body/div[2]/div[3]/a[1]",
             "next": "/html/body/div[2]/div[3]/a[4]",
-            "rawContent": "/html/body/div[2]/div[2]/div[3]",
-            "chapterName": "/html/body/div[2]/div[2]/div[1]/h1",
+            "rawContent": "/html/body/div[1]/div[1]/div[2]/div",
+            "chapterName": "/html/body/div[1]/div[1]/div[2]/h1",
             "content": [
                 {
                     "value": "<div id=\"content\">",
@@ -3732,6 +3780,20 @@
                 {
                     "value": "</div>",
                     "direction": 1
+                }
+            ],
+            "adContent": [
+                {
+                    "value": "\n<!--",
+                    "direction": 1
+                },
+                {
+                    "value": "<script data-cfasync=\"false\"",
+                    "direction": 2
+                },
+                {
+                    "value": "</script>",
+                    "direction": 2
                 }
             ],
             "prevURLContent": [
@@ -3766,6 +3828,13 @@
             "next": "/html/body/div[2]/div[5]/a[4]",
             "rawContent": "/html/body/div[2]/div[4]",
             "chapterName": "/html/body/div[2]/h1",
+            "splitText": "ticon-",
+            "splitContent": [
+                {
+                    "value": "\"",
+                    "direction": 1
+                }
+            ],
             "content": [
                 {
                     "value": "<div id=\"chaptercontent\">",
@@ -4195,7 +4264,7 @@
             ]
         }
     },
-    "version": "4.5.0",
+    "version": "4.5.7",
     "watchCount": 50,
     "txtChunkSize": 10000,
     "expirationDate2": 7,
@@ -4218,9 +4287,7 @@
     "invalidRoutes": [
         1
     ],
-    "route1": "https://tw.uukanshu.com",
-    "route1_1": "https://tw.uukanshu.net",
-    "route2": "https://www.69shuba.pro",
+    "route2": "https://69shuba.cx",
     "route2_1": "https://www.69shu.cx",
     "route3": "https://uukanshu.cc",
     "route3_1": "https://www.uukanshu.net",
@@ -4250,18 +4317,20 @@
     "forbiddenTextW": [
         "Just a moment"
     ],
+    "speechPercentThreshold": 0.45,
+    "speechPercentThresholdEnabled": true,
     "txtConditions": [
         "☆、第",
         "\n\n第",
         "\n第",
         "\n\n"
     ],
+    "sleepSecondsForDownload": {
+        "2": [0.35, 1.2]
+    },
     "txtChapterKey": "_____",
     "disclaimer": "1、%@所有內容均來自其他網站，本APP不參與組織掃圖、翻譯、錄入等工作。\n\n2、本APP僅為學術交流者及寫作愛好者提供試閱，如果你喜歡該作品，請聯繫相關出版機構購買正版。\n\n3、由於我們無法對所有作品的內容進行充分的監測，我們制定了旨在保護知識產權權利人合法權益的措施和步驟，當著作權人和/或依法可以行使信息網絡傳播權的權利人（以下簡稱「權利人」）發現本APP上的內容侵犯其信息網絡傳播權時，權利人應事先向本APP發出權利通知，本APP將根據相關法律規定採取措施刪除/隱藏相關內容。\n\n如有問題請聯繫我們: ",
     "list": {
-        "problemURLs": [
-            "https://www.69shuba.pro/ajax_top/7/1.htm"
-        ],
         "route1": {
             "itemFrom": 1,
             "itemCount": 24,
@@ -4402,31 +4471,44 @@
             ]
         },
         "route2": {
-            "needsPageIndex": false,
-            "content": [
-                {
-                    "value": "article_list_content\">",
-                    "direction": 2
-                },
-                {
-                    "value": "</ul>",
-                    "direction": 1
-                },
-                {
-                    "value": "<li>\n                                    <a target=\"_blank\" href=\"",
-                    "direction": 3
-                }
-            ],
+            "needsPageIndex": true,
+            "itemCount": 50,
             "contains": [
                 "/book/"
             ],
-            "urlContent": [
+            "pathPrefix": "/",
+            "pathSuffix": ".htm",
+            "pathContent": [
                 {
-                    "value": "<a target=\"_blank\" href=\"",
+                    "value": ".htm",
+                    "direction": 1
+                }
+            ],
+            "content": [
+                {
+                    "value": "<div class=\"newlistbox\">",
                     "direction": 2
                 },
                 {
-                    "value": "\">",
+                    "value": "<div class=\"pages\">",
+                    "direction": 1
+                },
+                {
+                    "value": "<li>",
+                    "direction": 3
+                }
+            ],
+            "urlContent": [
+                {
+                    "value": "</a></h3>",
+                    "direction": 1
+                },
+                {
+                    "value": "href=\"",
+                    "direction": 2
+                },
+                {
+                    "value": "\"",
                     "direction": 1
                 }
             ],
@@ -4466,15 +4548,15 @@
             ],
             "chapterContent": [
                 {
-                    "value": "<div class=\"newright\">",
+                    "value": "<ol class=\"ellipsis_2\">",
                     "direction": 1
                 },
                 {
-                    "value": "</span>",
+                    "value": "<label>",
                     "direction": 2
                 },
                 {
-                    "value": "</p>",
+                    "value": "</label>",
                     "direction": 1
                 }
             ],
@@ -5350,7 +5432,7 @@
             "pathPrefix": "/",
             "urlContent": [
                 {
-                    "value": "\">\n<div",
+                    "value": "\">",
                     "direction": 1
                 },
                 {
@@ -5463,11 +5545,12 @@
         "route2": {
             "httpRequest": "POST",
             "dropFirstCount": 1,
-            "api": "https://www.69shuba.pro/modules/article/search.php",
+            "api": "https://69shuba.cx/modules/article/search.php",
             "apiSuffix": "&searchtype=all",
             "headers": {
-                "Host": "www.69shuba.pro",
-                "Referer": "www.69shuba.pro/",
+                "Host": "69shuba.cx",
+                "Origin": "https://69shuba.cx",
+                "Referer": "https://69shuba.cx/modules/article/search.php",
                 "Content-Type": "application/x-www-form-urlencoded"
             },
             "xpath": "/html/body/div[3]/ul/li[1]/div",
@@ -5882,6 +5965,10 @@
                 }
             ],
             "introductionContent": [
+                {
+                    "value": "简介：",
+                    "direction": 2
+                },
                 {
                     "value": "簡介：",
                     "direction": 2
